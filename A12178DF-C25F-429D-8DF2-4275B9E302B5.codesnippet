@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>lViewReactor</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import ReactorKit
+import RxCocoa
+import RxSwift
+
+final class &lt;#Name#&gt;ViewReactor: Reactor {
+  enum Action {
+    
+  }
+  enum Mutation {
+    
+  }
+  struct State {
+    
+  }
+  
+  let initialState: State
+  private let provider: ServiceProviderType
+  
+  init(provider: ServiceProviderType) {
+    self.provider = provider
+    self.initialState = State()
+  }
+  
+  func mutate(action: Action) -&gt; Observable&lt;Mutation&gt; {
+    switch action {
+    }
+  }
+  func reduce(state: State, mutation: Mutation) -&gt; State {
+    var state = state
+    switch mutation {
+    }
+    return state
+  }
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>A12178DF-C25F-429D-8DF2-4275B9E302B5</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>lViewReactor</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

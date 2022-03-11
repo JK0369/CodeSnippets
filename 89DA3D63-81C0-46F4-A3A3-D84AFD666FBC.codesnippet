@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>lTabBarController</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import UIKit
+import RxSwift
+import RxCocoa
+import ReactorKit
+
+final class TabBarController: UITabBarController, ReactorKit.View {
+  private enum Metric {
+    static let itemWidth = 50.0
+    static let countOfItem = 3.0
+    static let tabBarItemImageInset = UIEdgeInsets.with(top: 5, bottom: -5)
+  }
+  private enum Color {
+    static let white = UIColor.white
+    static let black = UIColor.black
+    static let gray = UIColor.gray
+  }
+  
+  private var currentTabPresentables = [TabPresentable]() {
+    didSet { self.setupViewControllers() }
+  }
+  private(set) var currentTabIndex: TabIndex? {
+    get { self.currentTabPresentables[safe: self.selectedIndex]?.tabIndex }
+    set { self.setupSelectedIndex(newValue: newValue) }
+  }
+  var disposeBag = DisposeBag()
+  
+  required init(reactor: TabBarReactor) {
+    super.init(nibName: nil, bundle: nil)
+    self.delegate = self
+    self.tabBar.standardAppearance = UITabBarAppearance().then {
+      $0.configureWithTransparentBackground()
+      $0.stackedItemPositioning = .centered
+      $0.stackedItemWidth = Metric.itemWidth
+      $0.stackedItemSpacing = (UIScreen.main.bounds.width - Metric.itemWidth * Metric.countOfItem) / (Metric.countOfItem)
+    }
+    self.currentTabPresentables = reactor.currentState.tabs
+      .compactMap { [weak self] in self?.createTabPresentable($0, reactor: reactor) }
+    self.currentTabIndex = reactor.currentState.selectedTabIndex
+    self.setupViewControllers()
+    self.setupSelectedIndex(newValue: self.currentTabIndex)
+  }
+  @available(*, unavailable)
+  required init?(coder: NSCoder) { fatalError("xib not supported") }
+  deinit { log.verbose("DEINIT: TabBarViewController") }
+  
+  func bind(reactor: TabBarReactor) {
+    // Action
+    
+    // Status
+    reactor.state.tabs
+      .distinctUntilChanged()
+      .bind(to: self.rx.setViewControllers())
+      .disposed(by: self.disposeBag)
+    
+    reactor.state.selectedTabIndex
+      .skip(1)
+      .distinctUntilChanged { $0.isSameRoot(with: $1) }
+      .observe(on: MainScheduler.asyncInstance)
+      .bind(to: self.rx.currentTabIndex)
+      .disposed(by: self.disposeBag)
+  }
+  
+  func setupViewControllers() {
+    self.viewControllers = self.currentTabPresentables
+  }
+  func setupSelectedIndex(newValue: TabIndex?) {
+    guard
+      let currentTabIndex = newValue,
+      let currentIndex = newValue?.indexValue,
+      currentIndex != self.selectedIndex
+    else { return }
+    
+    log.debug("currentIndex: \(currentIndex), self.selectedIndex: \(self.selectedIndex) ")
+    self.selectedIndex = currentIndex
+    self.tabBar.standardAppearance.stackedLayoutAppearance = UITabBarItemAppearance().then {
+      if currentTabIndex.showsWhiteIcon {
+        $0.normal.iconColor = Color.black.withAlphaComponent(0.5)
+        $0.selected.iconColor = Color.black
+      } else {
+        $0.normal.iconColor = Color.black.withAlphaComponent(0.2)
+        $0.selected.iconColor = Color.black
+      }
+    }
+  }
+  
+  private func createTabPresentable(_ tabIndex: TabIndex, reactor: TabBarReactor) -&gt; TabPresentable {
+    let tabPresentable: TabPresentable = builder {
+      switch tabIndex {
+      case .&lt;#lowerCaseFirst#&gt;:
+        &lt;#UpperCaseFirst#&gt;ViewController(reactor: .init(provider: reactor.provider))
+      case .&lt;#lowerCaseSecond#&gt;:
+        &lt;#UppserCaseSecond#&gt;ViewController(reactor: .init(provider: reactor.provider))
+      case .&lt;#lowerCaseThird#&gt;:
+        &lt;#UppserCaseThird#&gt;ViewController(reactor: .init(provider: reactor.provider))
+      }
+    }
+    
+    tabPresentable.tabBarItem = UITabBarItem(
+      title: nil,
+      image: tabIndex.tabBarItemImage,
+      selectedImage: tabIndex.tabBarItemSelectedImage
+    ).then {
+      $0.imageInsets = Metric.tabBarItemImageInset
+    }
+    return tabPresentable
+  }
+}
+
+extension TabBarController: UITabBarControllerDelegate {
+  func tabBarController(
+    _ tabBarController: UITabBarController,
+    shouldSelect viewController: UIViewController
+  ) -&gt; Bool {
+    guard
+      let selectedTabIndex = (viewController as? TabPresentable)?.tabIndex,
+      let reactor = self.reactor
+    else { return true }
+    
+    switch selectedTabIndex {
+    case .&lt;#lowerCaseFirst#&gt;:
+      log.verbose("selected &lt;#lowerCaseFirst#&gt; tab bar")
+    case .&lt;#lowerCaseSecond#&gt;:
+      log.verbose("selected &lt;#lowerCaseSecond#&gt;s tab bar")
+    case .&lt;#lowerCaseThird#&gt;:
+      log.verbose("selected &lt;#lowerCaseThird#&gt; tab bar")
+    }
+    
+    reactor.action.onNext(.didSelect(selectedTabIndex))
+    return false
+  }
+}
+
+extension Reactive where Base: TabBarController {
+  func setViewControllers() -&gt; Binder&lt;[TabIndex]&gt; {
+    Binder(base) { (base: TabBarController, tabIndices: [TabIndex]) in
+      guard let provider = base.reactor?.provider else { return }
+      base.viewControllers = tabIndices.compactMap {
+        switch $0 {
+        case .&lt;#lowerCaseFirst#&gt;:
+          let reactor = &lt;#UpperCaseFirst#&gt;ViewReactor(provider: provider)
+          return &lt;#UpperCaseFirst#&gt;ViewController(reactor: reactor)
+        case .&lt;#lowerCaseSecond#&gt;:
+          let reactor = &lt;#lowerCaseSecond#&gt;ViewReactor(provider: provider)
+          return &lt;#UppserCaseSecond#&gt;ViewController(reactor: reactor)
+        case .&lt;#lowerCaseThird#&gt;:
+          let reactor = &lt;#lowerCaseThird#&gt;ViewReactor(provider: provider)
+          return &lt;#UppserCaseThird#&gt;ViewController(reactor: reactor)
+        }
+      }
+    }
+  }
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>89DA3D63-81C0-46F4-A3A3-D84AFD666FBC</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>lTabBarController</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

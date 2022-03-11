@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>lTabBarIndex</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import UIKit
+
+enum TabIndex: Int, Equatable {
+  case &lt;#first#&gt;
+  case &lt;#second#&gt;
+  case &lt;#third#&gt;
+  
+  var showsWhiteIcon: Bool { self == .&lt;#first#&gt; }
+  var tabBarItemImage: UIImage? {
+    switch self {
+    case .&lt;#first#&gt;:
+      return &lt;#UIImage(named: name)#&gt;
+    case .&lt;#second#&gt;:
+      return &lt;#UIImage(named: name)#&gt;
+    case .&lt;#third#&gt;:
+      return &lt;#UIImage(named: name)#&gt;
+    }
+  }
+  var tabBarItemSelectedImage: UIImage? {
+    switch self {
+    case .&lt;#first#&gt;:
+      return &lt;#UIImage(named: name)#&gt;
+    case .&lt;#second#&gt;:
+      return &lt;#UIImage(named: name)#&gt;
+    case .&lt;#third#&gt;:
+      return &lt;#UIImage(named: name)#&gt;
+    }
+  }
+  var indexValue: Int {
+    self.rawValue
+  }
+  
+  func isSameRoot(with tabIndex: TabIndex) -&gt; Bool {
+    self == tabIndex
+  }
+}
+
+protocol TabPresentable: UIViewController {
+  static var tabIndex: TabIndex { get }
+}
+
+extension TabPresentable {
+  var tabIndex: TabIndex { Self.tabIndex }
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B16576F9-02C4-410E-A457-2AE1B193B4A9</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>lTabBarIndex</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

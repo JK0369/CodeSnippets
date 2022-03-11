@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>lInteractor</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>protocol &lt;#Name#&gt;Interactable {
+  func back()
+}
+
+final class &lt;#Name#&gt;Interactor: ReactorKit.Reactor {
+  enum Action {
+    case show&lt;#Child2#&gt;Scene
+    case back
+  }
+  enum Mutation {
+    case setShow&lt;#Child2#&gt;Scene
+    case setBack(Bool)
+  }
+  struct State {
+    @Pulse var shouldShow&lt;#Child2#&gt;Scene = false
+    @Pulse var shouldBack = false
+  }
+  
+  let initialState: State
+  let provider: ServiceProviderType
+  private let forwardedAction = PublishSubject&lt;Action&gt;()
+  private let forwardedMutation = PublishSubject&lt;Mutation&gt;()
+  
+  init(provider: ServiceProviderType) {
+    self.provider = provider
+    self.initialState = State()
+  }
+  
+  func transform(action: Observable&lt;Action&gt;) -&gt; Observable&lt;Action&gt; {
+    .merge(
+      action,
+      self.forwardedAction
+        .observe(on: ConcurrentDispatchQueueScheduler(qos: .userInitiated))
+    )
+  }
+  func mutate(action: Action) -&gt; Observable&lt;Mutation&gt; {
+    switch action {
+    case .show&lt;#Child2#&gt;Scene:
+      return .just(.setShow&lt;#Child2#&gt;Scene)
+    case .back:
+      return .concat(
+        [.just(.setBack(true)), .just(.setBack(true))]
+      )
+    }
+  }
+  func transform(mutation: Observable&lt;Mutation&gt;) -&gt; Observable&lt;Mutation&gt; {
+    .merge(
+      mutation,
+      self.forwardedMutation
+    )
+  }
+  func reduce(state: State, mutation: Mutation) -&gt; State {
+    var state = state
+    switch mutation {
+    case .setShow&lt;#Child2#&gt;Scene:
+      state.shouldShow&lt;#Child2#&gt;Scene = true
+    case let .setBack(bool):
+      state.shouldBack = bool
+    }
+    return state
+  }
+}
+
+extension &lt;#Name#&gt;Interactor: &lt;#Name#&gt;Interactable {
+  func back() {
+    self.forwardedAction.onNext(.back)
+  }
+}
+
+extension &lt;#Name#&gt;Interactor: &lt;#Child1#&gt;Interactable {
+  func showNameScene() {
+    self.forwardedAction.onNext(.show&lt;#child2#&gt;Scene)
+  }
+}
+
+extension &lt;#Name#&gt;Interactor: &lt;#Child2#&gt;Interactable {
+  
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>EE62D0ED-F952-4646-9866-F0CA1B53C9AF</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>lInteractor</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

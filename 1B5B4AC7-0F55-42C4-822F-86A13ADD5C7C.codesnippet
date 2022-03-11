@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>lNavigationBarBind</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>self.navigationBar.rx.tapLeft
+  .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
+  .withUnretainedOnly(self)
+  .map { ss in ((ss.textView.text).emptyIfBlankOrZeroWidthSpace, ss.textView.isVisible == false) }
+  .map(Reactor.Action.tapBackButton)
+  .bind(to: reactor.action)
+  .disposed(by: self.disposeBag)</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>1B5B4AC7-0F55-42C4-822F-86A13ADD5C7C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>lNavigationBarBind</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
