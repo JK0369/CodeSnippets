@@ -3,21 +3,30 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lProperty</string>
+	<string>jStackView</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>private let &lt;#property#&gt; = &lt;#body#&gt;</string>
+	<string>  private let &lt;#Name#&gt;StackView = UIStackView() {
+    let stackView = UIStackView()
+    stackView.axis = .&lt;#vertical#&gt;
+    stackView.translatesAutoresizingMaskIntoConstraints = false
+    self.view.addSubview(stackView)
+    [
+      self.&lt;#view#&gt;,
+    ].forEach { stackView.addArrangedSubview($0) }
+    return stackView
+  }()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>46EE250A-DA67-46A8-8EEE-8F60C66071C4</string>
+	<string>692EE314-936C-46BC-953F-4D57A55731D0</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>lPrivateProperty</string>
+	<string>jStackView</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

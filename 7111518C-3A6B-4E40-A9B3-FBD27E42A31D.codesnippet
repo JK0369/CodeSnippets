@@ -3,21 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lProperty</string>
+	<string>jView</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>private let &lt;#property#&gt; = &lt;#body#&gt;</string>
+	<string>  private lazy var &lt;#name#&gt;View: UIView = {
+    let view = UIView()
+    view.backgroundColor = .&lt;#systemBlue#&gt;
+    view.translatesAutoresizingMaskIntoConstraints = false
+    self.view.addSubview(view)
+    return view
+  }()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>46EE250A-DA67-46A8-8EEE-8F60C66071C4</string>
+	<string>7111518C-3A6B-4E40-A9B3-FBD27E42A31D</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>lPrivateProperty</string>
+	<string>jView</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

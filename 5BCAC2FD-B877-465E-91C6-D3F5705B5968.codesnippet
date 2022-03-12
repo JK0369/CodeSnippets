@@ -3,21 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lProperty</string>
+	<string>jObjcFunc</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>private let &lt;#property#&gt; = &lt;#body#&gt;</string>
+	<string>  @objc private func &lt;#name#&gt;(&lt;#parameter#&gt;) {
+    &lt;#body#&gt;
+  }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>46EE250A-DA67-46A8-8EEE-8F60C66071C4</string>
+	<string>5BCAC2FD-B877-465E-91C6-D3F5705B5968</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>lPrivateProperty</string>
+	<string>jObjcFunc</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

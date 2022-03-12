@@ -3,21 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lProperty</string>
+	<string>jLabel</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>private let &lt;#property#&gt; = &lt;#body#&gt;</string>
+	<string>private lazy var &lt;#name#&gt;Label: UILabel = {
+  let label = UILabel()
+  label.&lt;#body#&gt;
+  label.translatesAutoresizingMaskIntoConstraints = false
+  self.view.addSubview(label)
+  return label
+}()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>46EE250A-DA67-46A8-8EEE-8F60C66071C4</string>
+	<string>67946D3E-460C-4BA9-92D2-737A794DEF16</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>lPrivateProperty</string>
+	<string>jLabel</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
