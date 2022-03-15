@@ -18,6 +18,7 @@ import RxCocoa
 import Reusable
 
 final class &lt;#Name#&gt;ViewController: BaseViewController, ReactorKit.View {
+  // MARK: Constants
   private enum Metric {
     
   }
@@ -28,15 +29,19 @@ final class &lt;#Name#&gt;ViewController: BaseViewController, ReactorKit.View {
     
   }
   
+  // MARK: UI
   &lt;#UI property#&gt;
   
+  // MARK: Properties
   var disposeBag = DisposeBag()
   
+  // MARK: Initializer
   required init(reactor: &lt;#Name#&gt;ViewReactor) {
     super.init()
     self.reactor = reactor
   }
   
+  // MARK: Layout
   override func configures() {
     super.configures()
     
