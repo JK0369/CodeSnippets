@@ -3,33 +3,34 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lButton</string>
+	<string>lDashedLineBorderView</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>private let &lt;#Name#&gt;Button = UIButton().then {
-  $0.setBackgroundImage(Color.&lt;#systemBlue#&gt;.image, for: .normal)
-  $0.setBackgroundImage(Color.&lt;#blue#&gt;.image, for: .highlighted)
-  $0.setAttributedTitle(
-    Text.&lt;#text#&gt;
-      .styled(style: .&lt;#body14#&gt;, with: .alignment(.center))
-      .colored(Color.&lt;#white#&gt;),
-    for: .normal
-  )
+	<string>private let dashedBorderView = DashedLineBorderView().then {
+  static let dashedBorderViewCornerRadius = 12.0
+  static let dashedBorderViewLineWidth = 6.0
+  static let dashedBorderViewDash = 6.0
+  static let dashedBorderViewGap = 4.0
+  $0.cornerRadius = Metric.dashedBorderViewCornerRadius
+  $0.lineWidth = Metric.dashedBorderViewLineWidth
+  $0.dash = Metric.dashedBorderViewDash
+  $0.gap = Metric.dashedBorderViewGap
+  $0.lineColor = Color.violet
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>98F580F8-0F1C-40F2-8C2A-57A129442694</string>
+	<string>F7BF0FFF-E8A6-4AED-9699-7E47CC6BBA97</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>lButton</string>
+	<string>lDashedLineBorderView</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

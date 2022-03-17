@@ -10,6 +10,9 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>import UIKit
+import SnapKit
+import RxSwift
+import RxCocoa
 
 final class &lt;#Name#&gt;: BaseView {
   // MARK: Constants

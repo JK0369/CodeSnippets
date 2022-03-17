@@ -3,24 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lslInset</string>
+	<string>lColor</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>static let &lt;#property#&gt;Inset = UIEdgeInsets&lt;#.horizontal(24, top: 94, bottom: 0)#&gt;</string>
+	<string>Color.&lt;#violet#&gt;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>AFBBC41D-4E5D-4CA0-A3AF-12DA74B472F7</string>
+	<string>A0FD0395-31A8-4DBF-955C-55D506EDB7DD</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>lslInset</string>
+	<string>lColor</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
