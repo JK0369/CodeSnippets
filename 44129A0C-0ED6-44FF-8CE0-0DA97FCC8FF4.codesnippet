@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lslColor</string>
+	<string>jAddSubview</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>static let &lt;#nero#&gt; = UIColor.&lt;#Slide#&gt;.&lt;#color#&gt;</string>
+	<string>self.&lt;#view#&gt;.addSubview(self.&lt;#view#&gt;)</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>361B1D07-A64C-4FD6-9FDE-B5F4A6160226</string>
+	<string>44129A0C-0ED6-44FF-8CE0-0DA97FCC8FF4</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>lslColor</string>
+	<string>jAddSubview</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

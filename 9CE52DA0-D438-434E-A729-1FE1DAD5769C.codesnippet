@@ -3,37 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lCollectionViewCell</string>
+	<string>jCollectionViewCell</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>import UIKit
-import SnapKit
-import RxSwift
-import Reusable
-
-final class &lt;#name#&gt;Cell: UICollectionViewCell, Reusable {
-  // MARK: Constants
-  private enum Metric {
-    &lt;#body#&gt;
-  }
-  private enum Material {
-    &lt;#body#&gt;
-  }
-  private enum Color {
-    &lt;#body#&gt;
-  }
-  private enum Text {
-    static let &lt;#string#&gt;Text = String.&lt;#Slide#&gt;.&lt;#body#&gt;
-  }
+	<string>final class &lt;#Name#&gt;CollectionViewCell: UICollectionViewCell {
+  static let id = "&lt;#Name#&gt;CollectionViewCell"
   
   // MARK: UI
   &lt;#UI property#&gt;
-  
-  // MARK: Properties
-  private(set) var disposeBag = DisposeBag()
   
   // MARK: Initializer
   @available(*, unavailable)
@@ -43,20 +23,12 @@ final class &lt;#name#&gt;Cell: UICollectionViewCell, Reusable {
   
   override init(frame: CGRect) {
     super.init(frame: frame)
-    
-    self.contentView.addSubviews(
-      &lt;#property#&gt;
-    )
-    
-    self.&lt;#name#&gt;.snp.makeConstraints {
-      $0.&lt;#edges#&gt;
-    }
+    &lt;#Layout#&gt;
   }
   
   override func prepareForReuse() {
     super.prepareForReuse()
     
-    self.disposeBag = DisposeBag()
     self.prepare(&lt;#parameter#&gt;)
   }
   
@@ -65,13 +37,13 @@ final class &lt;#name#&gt;Cell: UICollectionViewCell, Reusable {
   }
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>F4C7578C-0D48-4A74-9C92-3A99B21E6C37</string>
+	<string>9CE52DA0-D438-434E-A729-1FE1DAD5769C</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>lCollectionViewCell</string>
+	<string>jCollectionViewCell</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

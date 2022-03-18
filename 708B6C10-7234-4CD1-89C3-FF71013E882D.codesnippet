@@ -11,6 +11,7 @@
 	<key>IDECodeSnippetContents</key>
 	<string>  private let &lt;#name#&gt;ImageView = UIImageView().then {
     $0.image = Material.&lt;#image#&gt;
+    $0.isUserInteractionEnabled = false
   }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>708B6C10-7234-4CD1-89C3-FF71013E882D</string>
@@ -23,6 +24,6 @@
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>
