@@ -25,7 +25,7 @@ final class &lt;#Name#&gt;ViewReactor: Reactor {
   }
   
   let initialState: State
-  private let provider: ServiceProviderType
+  let provider: ServiceProviderType
   
   init(provider: ServiceProviderType) {
     self.provider = provider

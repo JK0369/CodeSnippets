@@ -9,7 +9,10 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>protocol &lt;#Name#&gt;Interactable: SignUpInteractable {
+	<string>import RxSwift
+import ReactorKit
+
+protocol &lt;#Name#&gt;Interactable: &lt;#Parent#&gt;Interactable {
   func show&lt;#Next#&gt;Scene()
 }
 
@@ -25,7 +28,7 @@ final class &lt;#Name#&gt;ViewReactor: Reactor {
   }
   
   let initialState: State
-  private let provider: ServiceProviderType
+  let provider: ServiceProviderType
   private let interactor: &lt;#Name#&gt;Interactable
   
   init(provider: ServiceProviderType, interactor: &lt;#Name#&gt;Interactable) {

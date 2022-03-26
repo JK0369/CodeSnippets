@@ -3,24 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lslSpacing</string>
+	<string>lBindWith</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>static let &lt;#property#&gt;Spacing = &lt;#24.0#&gt;</string>
+	<string>.bind(with: self) { ss, &lt;#arg#&gt; in
+  
+}
+.disposed(by: self.disposeBag)</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>B28576B6-AD40-4158-A30F-1C269DAC6789</string>
+	<string>9E1C6E4A-EDAC-469B-86F2-35EFB4CEBAE6</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>lslSpacing</string>
+	<string>lBindWith</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

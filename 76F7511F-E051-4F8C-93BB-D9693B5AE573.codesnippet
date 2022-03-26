@@ -9,21 +9,24 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>protocol &lt;#Name#&gt;Interactable {
+	<string>import RxSwift
+import ReactorKit
+
+protocol &lt;#Name#&gt;Interactable {
   func back()
 }
 
 final class &lt;#Name#&gt;Interactor: ReactorKit.Reactor {
   enum Action {
-    case show&lt;#Child2#&gt;Scene
+    case show&lt;#Next#&gt;Scene
     case back
   }
   enum Mutation {
-    case setShow&lt;#Child2#&gt;Scene
+    case setShow&lt;#Next#&gt;Scene
     case setBack(Bool)
   }
   struct State {
-    @Pulse var shouldShow&lt;#Child2#&gt;Scene = false
+    @Pulse var shouldShow&lt;#Next#&gt;Scene = false
     @Pulse var shouldBack = false
   }
   
@@ -46,12 +49,10 @@ final class &lt;#Name#&gt;Interactor: ReactorKit.Reactor {
   }
   func mutate(action: Action) -&gt; Observable&lt;Mutation&gt; {
     switch action {
-    case .show&lt;#Child2#&gt;Scene:
-      return .just(.setShow&lt;#Child2#&gt;Scene)
+    case .show&lt;#Next#&gt;Scene:
+      return .just(.setShow&lt;#Next#&gt;Scene)
     case .back:
-      return .concat(
-        [.just(.setBack(true)), .just(.setBack(true))]
-      )
+      return .just(.setBack(true))
     }
   }
   func transform(mutation: Observable&lt;Mutation&gt;) -&gt; Observable&lt;Mutation&gt; {
@@ -63,8 +64,8 @@ final class &lt;#Name#&gt;Interactor: ReactorKit.Reactor {
   func reduce(state: State, mutation: Mutation) -&gt; State {
     var state = state
     switch mutation {
-    case .setShow&lt;#Child2#&gt;Scene:
-      state.shouldShow&lt;#Child2#&gt;Scene = true
+    case .setShow&lt;#Next#&gt;Scene:
+      state.shouldShow&lt;#Next#&gt;Scene = true
     case let .setBack(bool):
       state.shouldBack = bool
     }
@@ -79,16 +80,18 @@ extension &lt;#Name#&gt;Interactor: &lt;#Name#&gt;Interactable {
 }
 
 extension &lt;#Name#&gt;Interactor: &lt;#Child1#&gt;Interactable {
-  func showNameScene() {
-    self.forwardedAction.onNext(.show&lt;#child2#&gt;Scene)
+  func show&lt;#Next#&gt;Scene() {
+    self.forwardedAction.onNext(.show&lt;#Next#&gt;Scene)
   }
 }
 
 extension &lt;#Name#&gt;Interactor: &lt;#Child2#&gt;Interactable {
   
-}</string>
+}
+
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>EE62D0ED-F952-4646-9866-F0CA1B53C9AF</string>
+	<string>76F7511F-E051-4F8C-93BB-D9693B5AE573</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
@@ -98,6 +101,6 @@ extension &lt;#Name#&gt;Interactor: &lt;#Child2#&gt;Interactable {
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

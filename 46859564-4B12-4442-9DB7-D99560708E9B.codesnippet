@@ -9,23 +9,28 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>final class &lt;#Name#&gt;Coordinator: UINavigationController, ReactorKit.View {
+	<string>import UIKit
+import ReactorKit
+import RxSwift
+import RxCocoa
+
+final class OnboardingCoordinator: UINavigationController, ReactorKit.View {
   // MARK: UI
-  private let &lt;#Child1#&gt;ViewController: &lt;#Child1#&gt;ViewController
-  private let &lt;#Child1#&gt;ViewReactor: &lt;#Child1#&gt;ViewReactor
-  private let &lt;#Child2#&gt;ViewController: &lt;#Child2#&gt;ViewController
-  private let &lt;#Child2#&gt;ViewReactor: &lt;#Child2#&gt;ViewReactor
+  private let &lt;#lowerChild1#&gt;ViewController: &lt;#UpperChild1#&gt;ViewController
+  private let &lt;#lowerChild1#&gt;ViewReactor: &lt;#UpperChild1#&gt;ViewReactor
+  private let &lt;#lowerChild2#&gt;ViewController: &lt;#UpperChild2#&gt;ViewController
+  private let &lt;#lowerChild2#&gt;ViewReactor: &lt;#UpperChild2#&gt;ViewReactor
   
   // MARK: Propertyies
   var disposeBag = DisposeBag()
   
   // MARK: Initializer
-  required init(interactor: &lt;#Name#&gt;Interactor) {
-    self.&lt;#Child1#&gt;ViewReactor = &lt;#Child1#&gt;ViewReactor(provider: interactor.provider, interactor: interactor)
-    self.&lt;#Child1#&gt;ViewController = &lt;#Child1#&gt;ViewController(reactor: self.&lt;#Child1#&gt;ViewReactor)
-    self.&lt;#Child2#&gt;ViewReactor = &lt;#Child2#&gt;ViewReactor(provider: interactor.provider, interactor: interactor)
-    self.&lt;#Child2#&gt;ViewController = &lt;#Child2#&gt;ViewController(reactor: self.&lt;#Child2#&gt;ViewReactor)
-    super.init(rootViewController: self.&lt;#Child1#&gt;ViewController)
+  required init(interactor: OnboardingInteractor) {
+    self.&lt;#lowerChild1#&gt;ViewReactor = &lt;#UpperChild1#&gt;ViewReactor(provider: interactor.provider, interactor: interactor)
+    self.&lt;#lowerChild1#&gt;ViewController = &lt;#UpperChild1#&gt;ViewController(reactor: self.&lt;#lowerChild1#&gt;ViewReactor)
+    self.&lt;#lowerChild2#&gt;ViewReactor = &lt;#UpperChild2#&gt;ViewReactor(provider: interactor.provider, interactor: interactor)
+    self.&lt;#lowerChild2#&gt;ViewController = &lt;#UpperChild2#&gt;ViewController(reactor: self.&lt;#lowerChild2#&gt;ViewReactor)
+    super.init(rootViewController: self.&lt;#lowerChild1#&gt;ViewController)
     self.reactor = interactor
   }
   @available(*, unavailable)
@@ -34,16 +39,16 @@
   }
   
   // MARK: Binding
-  func bind(reactor interactor: &lt;#Name#&gt;Interactor) {
+  func bind(reactor interactor: OnboardingInteractor) {
     interactor.state.shouldBack
       .observe(on: MainScheduler.asyncInstance)
       .bind(with: self) { ss, _ in ss.popViewController(animated: true) }
       .disposed(by: self.disposeBag)
     
-    interactor.state.shouldShow&lt;#Child2#&gt;Scene
+    interactor.state.shouldShow&lt;#UpperChild2#&gt;Scene
       .filterTrue()
       .observe(on: MainScheduler.asyncInstance)
-      .bind(with: self) { ss, _ in ss.pushViewController(ss.&lt;#Child2#&gt;ViewController, animated: true) }
+      .bind(with: self) { ss, _ in ss.pushViewController(ss.&lt;#lowerChild2#&gt;ViewController, animated: true) }
       .disposed(by: self.disposeBag)
   }
 }

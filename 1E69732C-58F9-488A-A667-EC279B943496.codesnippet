@@ -3,24 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lslSpacing</string>
+	<string></string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>static let &lt;#property#&gt;Spacing = &lt;#24.0#&gt;</string>
+	<string>.throttle(.milliseconds(300), scheduler: MainScheduler.instance)
+.map(Reactor.Action.&lt;#tapSignUpButton#&gt;)
+.bind(to: reactor.action)
+.disposed(by: self.disposeBag)</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>B28576B6-AD40-4158-A30F-1C269DAC6789</string>
+	<string>1E69732C-58F9-488A-A667-EC279B943496</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>lslSpacing</string>
+	<string>lThrottle</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
