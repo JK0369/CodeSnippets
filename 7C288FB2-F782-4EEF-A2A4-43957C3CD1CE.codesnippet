@@ -3,21 +3,22 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lslColor</string>
+	<string>lInstanceViewController</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>static let &lt;#nero#&gt; = UIColor.&lt;#YeonTam#&gt;.&lt;#color#&gt;</string>
+	<string>let &lt;#lowerName#&gt;Reactor = &lt;#UpperName#&gt;ViewReactor(provider: provider)
+let &lt;#lowerName#&gt;ViewController = &lt;#UpperName#&gt;ViewController(reactor: &lt;#lowerName#&gt;Reactor)</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>361B1D07-A64C-4FD6-9FDE-B5F4A6160226</string>
+	<string>7C288FB2-F782-4EEF-A2A4-43957C3CD1CE</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>lslColor</string>
+	<string>lInstanceViewController</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

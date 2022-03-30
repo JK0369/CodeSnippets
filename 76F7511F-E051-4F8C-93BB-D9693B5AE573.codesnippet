@@ -101,6 +101,6 @@ extension &lt;#Name#&gt;Interactor: &lt;#Child2#&gt;Interactable {
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>

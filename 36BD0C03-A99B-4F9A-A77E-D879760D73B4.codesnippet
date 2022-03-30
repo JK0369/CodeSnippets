@@ -3,24 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lslColor</string>
+	<string>lObserveOn</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>static let &lt;#nero#&gt; = UIColor.&lt;#YeonTam#&gt;.&lt;#color#&gt;</string>
+	<string>.observe(on: MainScheduler.asyncInstance)</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>361B1D07-A64C-4FD6-9FDE-B5F4A6160226</string>
+	<string>36BD0C03-A99B-4F9A-A77E-D879760D73B4</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>lslColor</string>
+	<string>lObserveOn</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

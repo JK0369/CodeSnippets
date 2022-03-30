@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>lTextField</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>private let textFieldContainer = UIView().then {
+  $0.backgroundColor = Color.&lt;#white#&gt;
+  $0.layer.borderWidth = 0.5
+  $0.layer.borderColor = Color.&lt;#novel#&gt;.cgColor
+  $0.layer.cornerRadius = 24
+  $0.clipsToBounds = true
+}
+
+private let textField = UITextField().then {
+  $0.attributedPlaceholder = Text.&lt;#messagePlaceholderText#&gt;
+    .styled(style: &lt;#.body14#&gt;)
+    .colored(Color.&lt;#novel#&gt;)
+  $0.defaultTextAttributes = TextStyle
+    .&lt;#body14#&gt;
+    .paragraphStyled(.lineBreakMode(.byClipping)).attributes
+  $0.textColor = Color.&lt;#black#&gt;
+  $0.keyboardType = .&lt;#numberPad#&gt;
+  $0.clipsToBounds = true
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>303E1E8F-168F-450A-AC4A-A0C166DEAA53</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>lTextField</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

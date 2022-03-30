@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lslColor</string>
+	<string>lButtonHeight</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>static let &lt;#nero#&gt; = UIColor.&lt;#YeonTam#&gt;.&lt;#color#&gt;</string>
+	<string>static let &lt;#sendButton#&gt;Height = &lt;#56.0#&gt;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>361B1D07-A64C-4FD6-9FDE-B5F4A6160226</string>
+	<string>0A07708B-395E-4148-9A50-66C120848CFD</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>lslColor</string>
+	<string>lButtonHeight</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

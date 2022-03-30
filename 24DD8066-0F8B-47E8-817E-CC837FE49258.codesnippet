@@ -3,21 +3,22 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lslColor</string>
+	<string>lInstanceCoordinator</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>static let &lt;#nero#&gt; = UIColor.&lt;#YeonTam#&gt;.&lt;#color#&gt;</string>
+	<string>let &lt;#lowerName#&gt;Interactor = &lt;#UpperName#&gt;Interactor(provider: provider)
+let &lt;#lowerName#&gt;Coordinator = &lt;#UpperName#&gt;Coordinator(interactor: &lt;#lowerName#&gt;Interactor)</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>361B1D07-A64C-4FD6-9FDE-B5F4A6160226</string>
+	<string>24DD8066-0F8B-47E8-817E-CC837FE49258</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>lslColor</string>
+	<string>lInstanceCoordinator</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

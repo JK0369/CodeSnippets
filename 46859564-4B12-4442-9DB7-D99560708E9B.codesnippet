@@ -14,7 +14,7 @@ import ReactorKit
 import RxSwift
 import RxCocoa
 
-final class OnboardingCoordinator: UINavigationController, ReactorKit.View {
+final class &lt;#Name#&gt;Coordinator: UINavigationController, ReactorKit.View {
   // MARK: UI
   private let &lt;#lowerChild1#&gt;ViewController: &lt;#UpperChild1#&gt;ViewController
   private let &lt;#lowerChild1#&gt;ViewReactor: &lt;#UpperChild1#&gt;ViewReactor
@@ -25,7 +25,7 @@ final class OnboardingCoordinator: UINavigationController, ReactorKit.View {
   var disposeBag = DisposeBag()
   
   // MARK: Initializer
-  required init(interactor: OnboardingInteractor) {
+  required init(interactor: &lt;#Start#&gt;Interactor) {
     self.&lt;#lowerChild1#&gt;ViewReactor = &lt;#UpperChild1#&gt;ViewReactor(provider: interactor.provider, interactor: interactor)
     self.&lt;#lowerChild1#&gt;ViewController = &lt;#UpperChild1#&gt;ViewController(reactor: self.&lt;#lowerChild1#&gt;ViewReactor)
     self.&lt;#lowerChild2#&gt;ViewReactor = &lt;#UpperChild2#&gt;ViewReactor(provider: interactor.provider, interactor: interactor)
@@ -39,7 +39,7 @@ final class OnboardingCoordinator: UINavigationController, ReactorKit.View {
   }
   
   // MARK: Binding
-  func bind(reactor interactor: OnboardingInteractor) {
+  func bind(reactor interactor: &lt;#Name#&gt;Interactor) {
     interactor.state.shouldBack
       .observe(on: MainScheduler.asyncInstance)
       .bind(with: self) { ss, _ in ss.popViewController(animated: true) }

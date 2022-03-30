@@ -12,7 +12,6 @@
 	<string>self.navigationBar.rx.tapLeft
   .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
   .withUnretainedOnly(self)
-  .map { ss in ((ss.textView.text).emptyIfBlankOrZeroWidthSpace, ss.textView.isVisible == false) }
   .map(Reactor.Action.tapBackButton)
   .bind(to: reactor.action)
   .disposed(by: self.disposeBag)</string>

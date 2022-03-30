@@ -16,7 +16,8 @@
 ).then {
   $0.titleLabel.attributedText = Text.navigationBarTitleLabelText
     .styled(style: .&lt;#title20#&gt;, with: .alignment(.&lt;#center#&gt;))
-    .colored(Color.&lt;#black#&gt;)
+    .colored(Color.black)
+  $0.leftButton.isHidden = false
   $0.rightButton.isHidden = true
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
