@@ -3,26 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lNavigationBarMetric</string>
+	<string>lImportUI</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>static let navigationBarSize = CGSize(width: UIScreen.main.bounds.size.width, height: 50)
-static let navigationBarInset = UIEdgeInsets(horizontal: 10, vertical: 5)
-static let navigationBarTitleInset = UIEdgeInsets.horizontal(50).with(top: 14, bottom: 13)</string>
+	<string>import UIKit
+import SnapKit
+import Then</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>61132F16-B00A-4B24-BA2E-C151A7E2BAB8</string>
+	<string>7D30CE4C-76FC-4DAA-BF5D-0BE6127ACB2E</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>lNavigationBarMetric</string>
+	<string>lImportUI</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

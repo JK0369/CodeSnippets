@@ -20,17 +20,29 @@ import Reusable
 final class &lt;#Name#&gt;ViewController: BaseViewController, ReactorKit.View {
   // MARK: Constants
   private enum Metric {
-    
+    static let navigationBarSize = CGSize(width: UIScreen.main.bounds.size.width, height: 50)
+    static let navigationBarInset = UIEdgeInsets(horizontal: 10, vertical: 5)
+    static let navigationBarTitleInset = UIEdgeInsets.horizontal(50).with(top: 14, bottom: 13)
   }
   private enum Color {
-    
+    static let black = UIColor.&lt;#YeonTam#&gt;.black
   }
   private enum Text {
-    
+    static let navigationBarText = &lt;#"이메일 인증"#&gt;
   }
   
   // MARK: UI
-  &lt;#UI property#&gt;
+  private let navigationBar = BaseNavigationBar(
+    size: Metric.navigationBarSize,
+    insets: Metric.navigationBarInset,
+    titleInsets: Metric.navigationBarTitleInset
+  ).then {
+    $0.titleLabel.attributedText = Text.navigationBarText
+      .styled(style: .title20, with: .alignment(.center))
+      .colored(Color.black)
+    $0.leftButton.isHidden = false
+    $0.rightButton.isHidden = true
+  }
   
   // MARK: Properties
   var disposeBag = DisposeBag()
@@ -46,18 +58,19 @@ final class &lt;#Name#&gt;ViewController: BaseViewController, ReactorKit.View {
     super.configures()
     
     self.view.addSubviews(
-      self.&lt;#titleButton#&gt;
+      self.navigationBar
     )
     
-    self.&lt;#property#&gt;.snp.makeConstraints {
-      $0.&lt;#edges#&gt;
+    self.navigationBar.snp.makeConstraints {
+      $0.top.left.right.equalTo(self.view.safeAreaLayoutGuide)
     }
   }
   func bind(reactor: &lt;#Name#&gt;ViewReactor) {
     // Action
-    self.&lt;#button#&gt;.rx.tap
+    self.navigationBar.rx.tapLeft
       .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
-      .map(Reactor.Action.&lt;#action#&gt;)
+      .withUnretainedOnly(self)
+      .map(Reactor.Action.tapBackButton)
       .bind(to: reactor.action)
       .disposed(by: self.disposeBag)
     

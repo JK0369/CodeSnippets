@@ -16,7 +16,6 @@
   $0.layer.cornerRadius = 24
   $0.clipsToBounds = true
 }
-
 private let textField = UITextField().then {
   $0.attributedPlaceholder = Text.&lt;#messagePlaceholderText#&gt;
     .styled(style: &lt;#.body14#&gt;)

@@ -18,10 +18,10 @@ protocol &lt;#Name#&gt;Interactable: &lt;#Parent#&gt;Interactable {
 
 final class &lt;#Name#&gt;ViewReactor: Reactor {
   enum Action {
-    
+    case tapBackButton
   }
   enum Mutation {
-    
+    case setBack
   }
   struct State {
     
@@ -39,15 +39,20 @@ final class &lt;#Name#&gt;ViewReactor: Reactor {
   
   func mutate(action: Action) -&gt; Observable&lt;Mutation&gt; {
     switch action {
+    case .tapBackButton:
+      return .just(.setBack)
     }
   }
   func reduce(state: State, mutation: Mutation) -&gt; State {
     var state = state
     switch mutation {
+    case .setBack:
+      self.interactor.&lt;#showOnboardingStartScene()#&gt;
     }
     return state
   }
-}</string>
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>B7A89874-F22A-482A-84EC-611DFF0DEB78</string>
 	<key>IDECodeSnippetLanguage</key>

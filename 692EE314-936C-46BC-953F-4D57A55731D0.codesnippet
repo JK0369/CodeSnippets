@@ -9,16 +9,12 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>  private let &lt;#Name#&gt;StackView = UIStackView() {
-    let stackView = UIStackView()
-    stackView.axis = .&lt;#vertical#&gt;
-    stackView.translatesAutoresizingMaskIntoConstraints = false
-    self.view.addSubview(stackView)
-    [
-      self.&lt;#view#&gt;,
-    ].forEach { stackView.addArrangedSubview($0) }
-    return stackView
-  }()</string>
+	<string>private let &lt;#Name#&gt;StackView: UIStackView = {
+  let stackView = UIStackView()
+  stackView.axis = .&lt;#vertical#&gt;
+  stackView.translatesAutoresizingMaskIntoConstraints = false
+  return stackView
+}()</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>692EE314-936C-46BC-953F-4D57A55731D0</string>
 	<key>IDECodeSnippetLanguage</key>

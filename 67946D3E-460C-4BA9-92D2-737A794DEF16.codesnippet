@@ -9,11 +9,10 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>private lazy var &lt;#name#&gt;Label: UILabel = {
+	<string>private let &lt;#name#&gt;Label: UILabel = {
   let label = UILabel()
   label.&lt;#body#&gt;
   label.translatesAutoresizingMaskIntoConstraints = false
-  self.view.addSubview(label)
   return label
 }()</string>
 	<key>IDECodeSnippetIdentifier</key>

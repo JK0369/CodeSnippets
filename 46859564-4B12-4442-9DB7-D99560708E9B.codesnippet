@@ -41,6 +41,7 @@ final class &lt;#Name#&gt;Coordinator: UINavigationController, ReactorKit.View {
   // MARK: Binding
   func bind(reactor interactor: &lt;#Name#&gt;Interactor) {
     interactor.state.shouldBack
+      .filterTrue()
       .observe(on: MainScheduler.asyncInstance)
       .bind(with: self) { ss, _ in ss.popViewController(animated: true) }
       .disposed(by: self.disposeBag)

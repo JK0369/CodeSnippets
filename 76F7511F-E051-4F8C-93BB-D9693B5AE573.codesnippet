@@ -14,20 +14,24 @@ import ReactorKit
 
 protocol &lt;#Name#&gt;Interactable {
   func back()
+  &lt;#func showOnboardingStartScene()#&gt; // main 플로우
 }
 
 final class &lt;#Name#&gt;Interactor: ReactorKit.Reactor {
   enum Action {
     case show&lt;#Next#&gt;Scene
     case back
+    &lt;#case showOnboardingStartScene#&gt; // main 플로우
   }
   enum Mutation {
     case setShow&lt;#Next#&gt;Scene
     case setBack(Bool)
+    case setMainFlow(MainFlow)
   }
   struct State {
     @Pulse var shouldShow&lt;#Next#&gt;Scene = false
     @Pulse var shouldBack = false
+    var mainFlow: MainFlow?
   }
   
   let initialState: State
@@ -52,7 +56,9 @@ final class &lt;#Name#&gt;Interactor: ReactorKit.Reactor {
     case .show&lt;#Next#&gt;Scene:
       return .just(.setShow&lt;#Next#&gt;Scene)
     case .back:
-      return .just(.setBack(true))
+      return .of(.setBack(true), .just(.setBack(false))
+    &lt;#case .showOnboardingStartScene:#&gt; // 메인 플로우
+      &lt;#return .just(.setMainFlow(.onboarding))#&gt;
     }
   }
   func transform(mutation: Observable&lt;Mutation&gt;) -&gt; Observable&lt;Mutation&gt; {
@@ -87,9 +93,7 @@ extension &lt;#Name#&gt;Interactor: &lt;#Child1#&gt;Interactable {
 
 extension &lt;#Name#&gt;Interactor: &lt;#Child2#&gt;Interactable {
   
-}
-
-</string>
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>76F7511F-E051-4F8C-93BB-D9693B5AE573</string>
 	<key>IDECodeSnippetLanguage</key>
