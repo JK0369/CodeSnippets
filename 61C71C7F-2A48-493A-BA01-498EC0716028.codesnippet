@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>lIsolatedStateReactor</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import ReactorKit
+import RxCocoa
+import RxSwift
+
+final class &lt;#ProfileEditPhotoVideo#&gt;ViewReactor: Reactor, IsolatedStateReactor {
+  enum Action {
+    
+  }
+  enum Mutation {
+    
+  }
+  struct State: UpdateStorable {
+    var updates: [PartialKeyPath&lt;Self&gt;] = [\.self]
+  }
+  
+  let initialState = State()
+  let provider: ServiceProviderType
+  
+  init(provider: ServiceProviderType) {
+    self.provider = provider
+  }
+  
+  func mutate(action: Action) -&gt; Observable&lt;Mutation&gt; {
+    switch action {
+    }
+  }
+  
+  func reduce(isolatedState state: inout IsolatedState, mutation: mutation) {
+    switch mutation {
+    }
+  }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>61C71C7F-2A48-493A-BA01-498EC0716028</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>lIsolatedStateReactor</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

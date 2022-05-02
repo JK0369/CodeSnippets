@@ -3,23 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lConstraints</string>
+	<string>jSlider</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>self.&lt;#name#&gt;.snp.makeConstraints {
-  $0.&lt;#edges#&gt;
-}</string>
+	<string>  private lazy var &lt;#play#&gt;Slider: UISlider = {
+    let slider = UISlider()
+    slider.addTarget(self, action: #selector(&lt;#didChangeSlide#&gt;), for: .valueChanged)
+    slider.translatesAutoresizingMaskIntoConstraints = false
+    self.view.addSubview(slider)
+    return slider
+  }()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>3D7C8E67-B423-47C2-A97D-4242AC7B38F5</string>
+	<string>633088A5-0F80-4C0E-9E2F-BF6A62A175BF</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>lConstraints</string>
+	<string>jSlider</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

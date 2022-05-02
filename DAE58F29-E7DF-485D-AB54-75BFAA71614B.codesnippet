@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>lCustomButton</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import UIKit
+import SnapKit
+import Then
+
+final class &lt;#SingleTownMapProfileVoiceAdd#&gt;Button: BaseButton {
+  // MARK: Constant
+  private enum Metric {
+    &lt;#static let bodyViewInset = UIEdgeInsets.with(right: 24)#&gt;
+  }
+  private enum Color {
+    &lt;#static let white = UIColor.Slide.white#&gt;
+  }
+  private enum Material {
+    &lt;#static let rightArrowImage = UIImage(named: "icSmallArrowRight")#&gt;
+  }
+  private enum Text {
+    &lt;#static let coachmarkText = "fix me! 삭제까지 1일 남았어요!\n새로운 보이스를 등록해보세요."#&gt;
+  }
+  
+  // MARK: UI
+  &lt;#body#&gt;
+  
+  override func configures() {
+    super.configures()
+    
+    &lt;#self.addSubview()#&gt;
+    
+  }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>DAE58F29-E7DF-485D-AB54-75BFAA71614B</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>lCustomButton</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

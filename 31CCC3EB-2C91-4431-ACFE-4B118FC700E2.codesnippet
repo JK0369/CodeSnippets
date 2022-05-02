@@ -3,24 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lImageView</string>
+	<string>lprivateFunc</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>private let &lt;#name#&gt;ImageView = UIButton().then {
-  $0.setImage(Material.&lt;#plusImage#&gt;, for: .normal)
-  $0.isUserInteractionEnabled = false
-}</string>
+	<string>  private func &lt;#name#&gt;(&lt;#parameter#&gt;) {
+    &lt;#body#&gt;
+  }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>6D6F9E4F-D277-4D6A-92CD-31ACEE5E2C8C</string>
+	<string>31CCC3EB-2C91-4431-ACFE-4B118FC700E2</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>lImageView</string>
+	<string>lprivateFunc</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
