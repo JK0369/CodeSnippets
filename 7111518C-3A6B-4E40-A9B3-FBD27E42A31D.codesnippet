@@ -9,11 +9,10 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>  private lazy var &lt;#name#&gt;View: UIView = {
+	<string>  private let &lt;#name#&gt;View: UIView = {
     let view = UIView()
     view.backgroundColor = .&lt;#systemBlue#&gt;
     view.translatesAutoresizingMaskIntoConstraints = false
-    self.view.addSubview(view)
     return view
   }()</string>
 	<key>IDECodeSnippetIdentifier</key>
