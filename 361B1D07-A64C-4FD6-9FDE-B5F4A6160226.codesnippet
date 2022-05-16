@@ -9,7 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>static let &lt;#nero#&gt; = UIColor.&lt;#YeonTam#&gt;.&lt;#color#&gt;</string>
+	<string>static let &lt;#nero#&gt; = UIColor.&lt;#Slide#&gt;.&lt;#nero#&gt;</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>361B1D07-A64C-4FD6-9FDE-B5F4A6160226</string>
 	<key>IDECodeSnippetLanguage</key>

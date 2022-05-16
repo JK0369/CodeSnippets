@@ -9,9 +9,9 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>static let collectionViewCellSize: CGSize = .init(width: 56, height: 56)
-static let collectionViewCellSpacing = 12.0
-static let collectionViewContentInset: UIEdgeInsets = .init(top: 14, left: 24, bottom: 14, right: 21)
+	<string>static let collectionViewCellSize = CGSize(all: 68)
+static let collectionViewCellSpacing = 18.0
+static let collectionViewContentInset = UIEdgeInsets.with(left: 18)
 
 private let &lt;#Name#&gt;CollectionView = UICollectionView(
   frame: .zero,
@@ -24,7 +24,6 @@ private let &lt;#Name#&gt;CollectionView = UICollectionView(
 ).then {
   $0.isScrollEnabled = true
   $0.showsHorizontalScrollIndicator = false
-  $0.translatesAutoresizingMaskIntoConstraints = false
   $0.contentInset = Metric.collectionViewContentInset
   $0.backgroundColor = .clear
   $0.register(cellType: &lt;#ProfileLikesYou#&gt;Cell.self)
@@ -40,6 +39,6 @@ private let &lt;#Name#&gt;CollectionView = UICollectionView(
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>

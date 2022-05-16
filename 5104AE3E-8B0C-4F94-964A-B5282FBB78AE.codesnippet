@@ -16,6 +16,7 @@
     // static let collectionCellSpacing = 8.0
     $0.minimumLineSpacing = Metric.collectionCellSpacing
     $0.minimumInteritemSpacing = 0
+    $0.itemSize = Metric.collectionViewCellSize // 또는 delegate 사용
   }
 ).then {
   $0.isScrollEnabled = true
