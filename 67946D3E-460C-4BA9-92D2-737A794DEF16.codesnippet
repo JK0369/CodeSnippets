@@ -9,9 +9,11 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>private let &lt;#name#&gt;Label: UILabel = {
+	<string>private let label: UILabel = {
   let label = UILabel()
-  label.&lt;#body#&gt;
+  label.text = &lt;#text#&gt;
+  label.font = .systemFont(ofSize: &lt;#T##CGFloat#&gt;, weight: &lt;#T##UIFont.Weight#&gt;)
+  label.numberOfLines = &lt;#0#&gt;
   label.translatesAutoresizingMaskIntoConstraints = false
   return label
 }()</string>
