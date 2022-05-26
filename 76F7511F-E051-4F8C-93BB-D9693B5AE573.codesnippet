@@ -56,8 +56,8 @@ final class &lt;#Name#&gt;Interactor: ReactorKit.Reactor {
     case .show&lt;#Next#&gt;Scene:
       return .just(.setShow&lt;#Next#&gt;Scene)
     case .back:
-      return .of(.setBack(true), .just(.setBack(false))
-    &lt;#case .showOnboardingStartScene:#&gt; // 메인 플로우
+      return .of(.setBack(true), .just(.setBack(false)))
+      &lt;#case .showOnboardingStartScene:#&gt; // 메인 플로우
       &lt;#return .just(.setMainFlow(.onboarding))#&gt;
     }
   }
