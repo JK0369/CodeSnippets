@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lCellTableView</string>
+	<string>lTableViewCell</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
@@ -47,6 +47,7 @@ final class &lt;#Name#&gt;Cell: UITableViewCell, Reusable {
   
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
+    self.selectionStyle = .none
     
     self.contentView.addSubviews(
       self.&lt;#view#&gt;,
@@ -80,7 +81,7 @@ final class &lt;#Name#&gt;Cell: UITableViewCell, Reusable {
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>lCellTableView</string>
+	<string>lTableViewCell</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
