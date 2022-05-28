@@ -9,9 +9,9 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>private let &lt;#Name#&gt;Button = UIButton().then {
-  $0.setBackgroundImage(Color.&lt;#systemBlue#&gt;.image, for: .normal)
-  $0.setBackgroundImage(Color.&lt;#blue#&gt;.image, for: .highlighted)
+	<string>private let &lt;#Name#&gt;Button = ScaleRoundableButton().then {
+  $0.rounded = true
+  $0.backgroundColor = &lt;#Color.white#&gt;
   
   let label = UILabel().then {
     $0.attributedText = Text.buttonText

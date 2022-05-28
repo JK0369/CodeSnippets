@@ -47,12 +47,6 @@ final class &lt;#Name#&gt;ViewController: BaseViewController, ReactorKit.View {
   // MARK: Properties
   var disposeBag = DisposeBag()
   
-  // MARK: Initializer
-  required init(reactor: &lt;#Name#&gt;ViewReactor) {
-    super.init()
-    self.reactor = reactor
-  }
-  
   // MARK: Layout
   override func configures() {
     super.configures()

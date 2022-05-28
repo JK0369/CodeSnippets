@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>lButtonEnabled</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>private let &lt;#name#&gt;Button = ScaleRoundableButton().then {
+  $0.rounded = true
+  $0.backgroundColor = Color.smoke
+  $0.isEnabled = false
+}
+private let &lt;#name#&gt;Label = UILabel().then {
+  $0.attributedText = Text.confirmText
+    .styled(style: .title16, with: .alignment(.center))
+    .colored(Color.novel)
+  $0.numberOfLines = 1
+  $0.isUserInteractionEnabled = false
+}
+
+self.&lt;#name#&gt;Button.rx.isEnabled
+  .distinctUntilChanged()
+  .observe(on: MainScheduler.asyncInstance)
+  .map { $0 ? Color.&lt;#havelockblue#&gt; : Color.novel }
+  .bind(to: self.confirmButtonLabel.rx.textColor)
+  .disposed(by: self.disposeBag)</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>FC899645-27CA-410C-899E-629353245C85</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>lButtonEnabled</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
