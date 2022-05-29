@@ -11,18 +11,18 @@
 	<key>IDECodeSnippetContents</key>
 	<string>private let &lt;#Name#&gt;Button = ScaleRoundableButton().then {
   $0.rounded = true
-  $0.backgroundColor = &lt;#Color.white#&gt;
+  $0.backgroundColor = &lt;#Color.smoke#&gt;
   
   let label = UILabel().then {
     $0.attributedText = Text.buttonText
       .styled(style: .title16, with: .alignment(.center))
-      .colored(Color.white)
+      .colored(Color.havelockblue)
     $0.numberOfLines = 1
     $0.isUserInteractionEnabled = false
   }
   $0.addSubview(label)
   label.snp.makeConstraints {
-    $0.edges.equalToSuperview().inset(&lt;#T##ConstraintInsetTarget#&gt;)
+    $0.edges.equalToSuperview().inset(UIEdgeInsets(horizontal: 16, vertical: 8))
   }
 }</string>
 	<key>IDECodeSnippetIdentifier</key>

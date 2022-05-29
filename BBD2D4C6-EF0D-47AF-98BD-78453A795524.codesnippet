@@ -69,7 +69,7 @@ final class &lt;#Name#&gt;Cell: UITableViewCell, Reusable {
     self.prepare()
   }
   
-  private func prepare(&lt;#parameter#&gt;) {
+  func prepare(&lt;#parameter#&gt;) {
     &lt;#body#&gt;
   }
 }
