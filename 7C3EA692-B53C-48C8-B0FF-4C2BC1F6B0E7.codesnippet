@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lViewController</string>
+	<string>lViewController+NavigationBar</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
@@ -59,6 +59,7 @@ final class &lt;#Name#&gt;ViewController: BaseViewController, ReactorKit.View {
       $0.top.left.right.equalTo(self.view.safeAreaLayoutGuide)
     }
   }
+  
   func bind(reactor: &lt;#Name#&gt;ViewReactor) {
     // Action
     self.navigationBar.rx.tapLeft
@@ -84,7 +85,7 @@ final class &lt;#Name#&gt;ViewController: BaseViewController, ReactorKit.View {
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>lViewController</string>
+	<string>lViewController+NavigationBar</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

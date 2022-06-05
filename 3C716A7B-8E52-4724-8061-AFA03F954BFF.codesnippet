@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lViewController+TabBar</string>
+	<string></string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
@@ -17,62 +17,43 @@ import RxSwift
 import RxCocoa
 import Reusable
 
-class &lt;#UpperCaseName#&gt;ViewController: BaseViewController, ReactorKit.View, TabPresentable {
+final class &lt;#UpperCaseName#&gt;ViewController: BaseViewController, ReactorKit.View {
+  // MARK: Constants
   private enum Metric {
-    static let tabBarSeparatorViewHeight = 1.0
   }
   private enum Color {
-    static let gray = UIColor.&lt;#BaseReactorKit#&gt;.grey
   }
   private enum Text {
-
   }
   
-  static var tabIndex: TabIndex = .&lt;#lowerCaseName#&gt;
+  // MARK: UI
   
-  private let tabBarSeparatorView = UIView().then {
-    $0.backgroundColor = Color.gray
-    $0.isUserInteractionEnabled = false
-    $0.alpha = 0.2
-  }
-  
+  // MARK: Properties
   var disposeBag = DisposeBag()
   
+  // MARK: Layout
   override func configures() {
     super.configures()
     
-    self.view.addSubviews(
-      self.tabBarSeparatorView
-    )
-    self.tabBarSeparatorView.snp.makeConstraints {
-      $0.bottom.left.right.equalTo(self.view.safeAreaLayoutGuide)
-      $0.height.equalTo(Metric.tabBarSeparatorViewHeight)
-    }
   }
   
   func bind(reactor: &lt;#UpperCaseName#&gt;ViewReactor) {
     // Action
-    self.rx.viewDidLoad
-      .map(Reactor.Action.viewDidLoad)
-      .bind(to: reactor.action)
-      .disposed(by: self.disposeBag)
     
     // State
-    
   }
-}
-</string>
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>7901B73A-F675-4145-93D3-33A8BF1B4D1A</string>
+	<string>3C716A7B-8E52-4724-8061-AFA03F954BFF</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>lViewController+TabBar</string>
+	<string>lViewController</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
