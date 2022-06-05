@@ -52,10 +52,6 @@ class &lt;#UpperCaseName#&gt;ViewController: BaseViewController, ReactorKit.View
   
   func bind(reactor: &lt;#UpperCaseName#&gt;ViewReactor) {
     // Action
-    self.rx.viewDidLoad
-      .map(Reactor.Action.viewDidLoad)
-      .bind(to: reactor.action)
-      .disposed(by: self.disposeBag)
     
     // State
     
