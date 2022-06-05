@@ -148,14 +148,23 @@ extension Reactive where Base: TabBarController {
       base.viewControllers = tabIndices.compactMap {
         switch $0 {
         case .&lt;#lowerCaseFirst#&gt;:
-          let reactor = &lt;#UpperCaseFirst#&gt;ViewReactor(provider: provider)
-          return &lt;#UpperCaseFirst#&gt;ViewController(reactor: reactor)
+          return UINavigationController(
+            rootViewController: &lt;#UpperCaseFirst#&gt;ViewController().then {
+              $0.reactor = .init(provider: provider)
+            }  
+          )
         case .&lt;#lowerCaseSecond#&gt;:
-          let reactor = &lt;#lowerCaseSecond#&gt;ViewReactor(provider: provider)
-          return &lt;#UppserCaseSecond#&gt;ViewController(reactor: reactor)
+          return UINavigationController(
+            rootViewController: &lt;#UppserCaseSecond#&gt;ViewController().then {
+              $0.reactor = .init(provider: provider)
+            }  
+          )
         case .&lt;#lowerCaseThird#&gt;:
-          let reactor = &lt;#lowerCaseThird#&gt;ViewReactor(provider: provider)
-          return &lt;#UppserCaseThird#&gt;ViewController(reactor: reactor)
+          return UINavigationController(
+            rootViewController: &lt;#UppserCaseThird#&gt;ViewController().then {
+              $0.reactor = .init(provider: provider)
+            }  
+          )
         }
       }
     }
