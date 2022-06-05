@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>lSegmentedControl</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>private let segmentedControl = UISegmentedControl(items: [Text.&lt;#matchedUser#&gt;Text, Text.&lt;#passedUser#&gt;Text]).then {
+  $0.selectedSegmentIndex = 0
+}
+private let &lt;#matchedUser#&gt;ContainerView = UIView()
+private let &lt;#passedUser#&gt;ContainerView = UIView()</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>00E3DD0A-2E08-423D-AEEA-956B3B1CE62F</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>lSegmentedControl</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
