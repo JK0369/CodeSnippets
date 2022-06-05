@@ -25,7 +25,6 @@ final class &lt;#Name#&gt;ViewController: BaseViewController, ReactorKit.View {
     static let navigationBarTitleInset = UIEdgeInsets.horizontal(50).with(top: 14, bottom: 13)
   }
   private enum Color {
-    static let black = UIColor.&lt;#YeonTam#&gt;.black
   }
   private enum Text {
     static let navigationBarText = &lt;#"이메일 인증"#&gt;
@@ -60,6 +59,7 @@ final class &lt;#Name#&gt;ViewController: BaseViewController, ReactorKit.View {
     }
   }
   
+  // MARK: Binding
   func bind(reactor: &lt;#Name#&gt;ViewReactor) {
     // Action
     self.navigationBar.rx.tapLeft
@@ -70,12 +70,6 @@ final class &lt;#Name#&gt;ViewController: BaseViewController, ReactorKit.View {
       .disposed(by: self.disposeBag)
     
     // State
-    reactor.state.&lt;#State#&gt;
-      .observe(on: MainScheduler.asyncInstance)
-      .bind(with: self) { ss, &lt;#_#&gt; in
-        
-      }
-      .disposed(by: self.disposeBag)
   }
 }</string>
 	<key>IDECodeSnippetIdentifier</key>

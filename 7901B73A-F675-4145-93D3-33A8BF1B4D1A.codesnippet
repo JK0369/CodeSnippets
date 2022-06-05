@@ -18,6 +18,7 @@ import RxCocoa
 import Reusable
 
 class &lt;#UpperCaseName#&gt;ViewController: BaseViewController, ReactorKit.View, TabPresentable {
+  // MARK: Constants
   private enum Metric {
     static let tabBarSeparatorViewHeight = 1.0
   }
@@ -27,17 +28,19 @@ class &lt;#UpperCaseName#&gt;ViewController: BaseViewController, ReactorKit.View
   private enum Text {
 
   }
-  
   static var tabIndex: TabIndex = .&lt;#lowerCaseName#&gt;
   
+  // MARK: UI
   private let tabBarSeparatorView = UIView().then {
     $0.backgroundColor = Color.gray
     $0.isUserInteractionEnabled = false
     $0.alpha = 0.2
   }
   
+  // MARK: Properties
   var disposeBag = DisposeBag()
   
+  // MARK: Layout
   override func configures() {
     super.configures()
     
@@ -50,6 +53,7 @@ class &lt;#UpperCaseName#&gt;ViewController: BaseViewController, ReactorKit.View
     }
   }
   
+  // MARK: Binding
   func bind(reactor: &lt;#UpperCaseName#&gt;ViewReactor) {
     // Action
     
