@@ -54,6 +54,6 @@ final class &lt;#UpperCaseName#&gt;ViewController: BaseViewController, ReactorKi
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>
