@@ -10,15 +10,15 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>private let textView = UITextView().then {
-  $0.isEditable = false
+  $0.isEditable = true
   $0.textContainerInset = .zero
   $0.contentInset = .zero
   $0.scrollIndicatorInsets = .zero
   $0.isScrollEnabled = true
-  $0.attributedPlaceholder = Text.singleTownReportDetailPlaceholder
+  $0.attributedPlaceholder = Text.&lt;#singleTownReportDetailPlaceholder#&gt;
     .styled(style: .body15)
     .colored(Color.novel.withAlpha(0.6))
-  $0.font = TextStyle.body15.styles.font
+  $0.font = &lt;#TextStyle.body15.styles.font#&gt;
   $0.textColor = Color.nero
   $0.returnKeyType = .done
 }
