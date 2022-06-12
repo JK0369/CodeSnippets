@@ -32,9 +32,24 @@ final class &lt;#Name#&gt;ViewReactor: Reactor {
     self.initialState = State()
   }
   
+  // MARK: Action -&gt; Mutation
+  func transform(action: Observable&lt;Action&gt;) -&gt; Observable&lt;Action&gt; {
+    .merge(
+      action
+//      self.provider.recordService.recordsObservable
+//        .map(Action.didUpdateData)
+    )
+  }
   func mutate(action: Action) -&gt; Observable&lt;Mutation&gt; {
     switch action {
     }
+  }
+  
+  // MARK: Mutation -&gt; State
+  func transform(mutation: Observable&lt;Mutation&gt;) -&gt; Observable&lt;Mutation&gt; {
+    .merge(
+      mutation
+    )
   }
   func reduce(state: State, mutation: Mutation) -&gt; State {
     var state = state

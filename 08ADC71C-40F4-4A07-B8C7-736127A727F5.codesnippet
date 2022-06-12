@@ -3,29 +3,30 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lbindEndEditing</string>
+	<string>lBindViewDidAppear</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>self.view.rx.onTap
-  .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
+	<string>self.rx.viewDidAppear
+  .mapVoid()
+  .observe(on: MainScheduler.asyncInstance)
   .bind(withOnly: self) { ss in
-    ss.view.endEditing(true)
+    ss.textField.becomeFirstResponder()
   }
-  .disposed(by: self.disposeBag)</string>
+.disposed(by: self.disposeBag)</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>C8B4C9CD-CE8E-44C8-B3F5-6CCDD20F8CEE</string>
+	<string>08ADC71C-40F4-4A07-B8C7-736127A727F5</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>lbindEndEditing</string>
+	<string>lBindViewDidAppear</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
