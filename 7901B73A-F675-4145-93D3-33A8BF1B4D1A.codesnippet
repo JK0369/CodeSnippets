@@ -23,6 +23,7 @@ class &lt;#UpperCaseName#&gt;ViewController: BaseViewController, ReactorKit.View
     static let tabBarSeparatorViewHeight = 1.0
   }
   private enum Color {
+    static let grey = UIColor.&lt;#YeonTam#&gt;.grey
   }
   private enum Text {
   }
@@ -30,7 +31,7 @@ class &lt;#UpperCaseName#&gt;ViewController: BaseViewController, ReactorKit.View
   
   // MARK: UI
   private let tabBarSeparatorView = UIView().then {
-    $0.backgroundColor = Color.gray
+    $0.backgroundColor = Color.grey
     $0.isUserInteractionEnabled = false
     $0.alpha = 0.2
   }

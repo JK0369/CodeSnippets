@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>lTableViewHeader</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import UIKit
+import Reusable
+
+final class &lt;#Preference#&gt;SectionHeader: UITableViewHeaderFooterView, Reusable {
+  // MARK: Constants
+  private enum Metric {
+    static let contentInset: UIEdgeInsets = .init(top: 23, left: 20, bottom: 11, right: 20)
+  }
+  private enum Color {
+    static let novel = UIColor.&lt;#TapCounter#&gt;.novel
+    static let whitesmoke = UIColor.&lt;#TapCounter#&gt;.whitesmoke
+  }
+  
+  // MARK: UI
+  private let titleLabel = UILabel().then {
+    $0.attributedText = String.zeroWidthSpace
+      .styled(style: .body12, with: .alignment(.left))
+      .colored(Color.novel)
+    $0.numberOfLines = 0
+  }
+  
+  // MARK: Initializers
+  override init(reuseIdentifier: String?) {
+    super.init(reuseIdentifier: reuseIdentifier)
+    
+    self.backgroundColor = Color.whitesmoke
+    
+    self.contentView.addSubviews(self.titleLabel)
+    
+    self.titleLabel.snp.makeConstraints {
+      $0.edges.equalToSuperview().inset(Metric.contentInset)
+    }
+  }
+  
+  @available(*, unavailable)
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+
+  override func prepareForReuse() {
+    super.prepareForReuse()
+    
+    self.prepare(title: nil)
+  }
+  
+  func prepare(title: String?) {
+    self.titleLabel.text = title
+  }
+}
+
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>3C58D2DC-D66D-4A32-91A3-5FCA99A53A60</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>lTableViewHeader</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

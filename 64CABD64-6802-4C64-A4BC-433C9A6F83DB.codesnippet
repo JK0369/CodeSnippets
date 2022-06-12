@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>lExtensionHeaderFooter</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>extension &lt;#History#&gt;ViewController: UITableViewDelegate {
+  func tableView(
+    _ tableView: UITableView,
+    viewForHeaderInSection section: Int
+  ) -&gt; UIView? {
+    tableView.dequeueReusableHeaderFooterView(&lt;#HistorySectionHeader#&gt;.self).then {
+//      guard
+//        case let .date(string) = self.reactor?.currentState.sections[section].model
+//      else { fatalError() }
+//      $0.prepare(title: string)
+    }
+  }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>64CABD64-6802-4C64-A4BC-433C9A6F83DB</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>lExtensionHeaderFooter</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
