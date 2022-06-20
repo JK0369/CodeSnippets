@@ -15,7 +15,7 @@ import Reusable
 final class &lt;#Preference#&gt;SectionHeader: UITableViewHeaderFooterView, Reusable {
   // MARK: Constants
   private enum Metric {
-    static let contentInset: UIEdgeInsets = .init(top: 23, left: 20, bottom: 11, right: 20)
+    static let contentInset = UIEdgeInsets.horizontal(20, top: 23, bottom: 11)
   }
   private enum Color {
     static let novel = UIColor.&lt;#TapCounter#&gt;.novel
@@ -71,6 +71,6 @@ final class &lt;#Preference#&gt;SectionHeader: UITableViewHeaderFooterView, Reus
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>
