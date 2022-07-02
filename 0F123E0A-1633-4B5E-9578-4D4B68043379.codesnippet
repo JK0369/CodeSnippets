@@ -3,23 +3,29 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lGradientLayer</string>
+	<string>lSeparatorView</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>  private var gradientLayer = CAGradientLayer().then {
-    $0.colors = Color.gradationColors.map(\.cgColor)
-  }</string>
+	<string>static let separatorHeight = 1.0
+let separatorView = UIView().then {
+  $0.backgroundColor = Color.smoke
+  $0.isUserInteractionEnabled = false
+}
+self.separatorView.snp.makeConstraints {
+  $0.left.right.bottom.equalToSuperview()
+  $0.height.equalTo(Metric.separatorHeight)
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>41C470B8-042A-44D6-8EDB-43CEA0BAD8A2</string>
+	<string>0F123E0A-1633-4B5E-9578-4D4B68043379</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>lGradientLayer</string>
+	<string>lSeparatorView</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
