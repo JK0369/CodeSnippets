@@ -29,7 +29,6 @@ final class &lt;#UpperCaseName#&gt;ViewController: BaseViewController, ReactorKi
   // MARK: UI
   
   // MARK: Properties
-  var disposeBag = DisposeBag()
   
   // MARK: Layout
   override func configures() {
