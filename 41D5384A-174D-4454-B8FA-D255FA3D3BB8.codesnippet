@@ -3,24 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lUnavailable</string>
+	<string>iPreviewView</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@available(*, unavailable)</string>
+	<string>struct &lt;#Name#&gt;View_Previews: PreviewProvider {
+  static var previews: some View {
+    &lt;#Name#&gt;View()
+  }
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>163F86EF-62F5-4FBD-90DA-EE57749C9A44</string>
+	<string>41D5384A-174D-4454-B8FA-D255FA3D3BB8</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>lUnavailable</string>
+	<string>iPreviewView</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
