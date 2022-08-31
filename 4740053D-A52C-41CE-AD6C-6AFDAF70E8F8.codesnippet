@@ -3,26 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lMakeConstraints</string>
+	<string>iPreview</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>self.&lt;#name#&gt;.snp.makeConstraints {
-  $0.&lt;#edges#&gt;
+	<string>struct &lt;#Name#&gt;View_Previews: PreviewProvider {
+  static var previews: some View {
+    &lt;#Name#&gt;View()
+  }
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>3D7C8E67-B423-47C2-A97D-4242AC7B38F5</string>
+	<string>4740053D-A52C-41CE-AD6C-6AFDAF70E8F8</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>lMakeConstraints</string>
+	<string>iPreview</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
