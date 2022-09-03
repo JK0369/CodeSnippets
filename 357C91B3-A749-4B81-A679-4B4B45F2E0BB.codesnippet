@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>iView</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import SwiftUI
+import Combine
+
+struct &lt;#Name#&gt;View: View {
+  // MARK: Constants
+  private enum Metric {
+  }
+  private enum Text {
+  }
+  private enum Material {
+  }
+  
+  // MARK: Properties
+  let viewModel: AnyViewModel&lt;&lt;#Name#&gt;ViewModel.Action, &lt;#Name#&gt;ViewModel.State&gt;
+  
+  // MARK: UI
+  var body: some View {
+    Text("&lt;#Name#&gt;")
+      .foregroundColor(.blue)
+  }
+}
+
+struct &lt;#Name#&gt;View_Previews: PreviewProvider {
+  static var previews: some View {
+    &lt;#Name#&gt;View(viewModel: AnyViewModel(&lt;#Name#&gt;ViewModel(provider: ServiceProvider())))
+  }
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>357C91B3-A749-4B81-A679-4B4B45F2E0BB</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>iView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

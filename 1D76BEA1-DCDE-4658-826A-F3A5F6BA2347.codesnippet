@@ -3,28 +3,47 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>iPreview</string>
+	<string>iViewModel</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>struct &lt;#Name#&gt;View_Previews: PreviewProvider {
-  static var previews: some View {
-    &lt;#Name#&gt;View()
+	<string>import Combine
+
+final class &lt;#Name#&gt;ViewModel: ViewModelType {
+  // MARK: Constants
+  enum Action {
+  }
+  struct State {
+  }
+  
+  // MARK: Properties
+  let provider: ServiceProviderType
+  @Published var state: State
+  var cancellables = Set&lt;AnyCancellable&gt;()
+  
+  // MARK: Initializer
+  init(provider: ServiceProviderType) {
+    self.provider = provider
+    self.state = State()
+  }
+  
+  // MARK: Methods
+  func action(_ action: Action) {
   }
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>4740053D-A52C-41CE-AD6C-6AFDAF70E8F8</string>
+	<string>1D76BEA1-DCDE-4658-826A-F3A5F6BA2347</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>iPreview</string>
+	<string>iViewModel</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
