@@ -13,11 +13,10 @@
 import AlertToast
 import Combine
 
-@main
-struct &lt;#Name#&gt;App: App {
+struct &lt;#Name#&gt;View: View {
   @ObservedObject var viewModel: SplashViewModel
   
-  var body: some Scene {
+  var body: some View {
     self.content
   }
   
@@ -27,10 +26,6 @@ struct &lt;#Name#&gt;App: App {
       return AnyView.clearView
     }
   }
-}
-
-// MARK: UI
-extension AnyView {
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>357C91B3-A749-4B81-A679-4B4B45F2E0BB</string>
