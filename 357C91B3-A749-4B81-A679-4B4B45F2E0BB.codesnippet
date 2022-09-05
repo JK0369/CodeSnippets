@@ -10,7 +10,6 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>import SwiftUI
-import AlertToast
 import Combine
 
 struct &lt;#Name#&gt;View: View {
