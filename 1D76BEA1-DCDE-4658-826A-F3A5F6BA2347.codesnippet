@@ -11,28 +11,27 @@
 	<key>IDECodeSnippetContents</key>
 	<string>import Combine
 
-final class &lt;#Name#&gt;ViewModel: ViewModelType {
-  // MARK: Constants
+final class &lt;#Name#&gt;ViewModel: ViewModelable {
   enum Action {
   }
-  struct State {
+  enum State {
+    case raw
   }
-  
+   
   // MARK: Properties
-  let provider: ServiceProviderType
-  @Published var state: State
+  var provider: ServiceProviderType
   var cancellables = Set&lt;AnyCancellable&gt;()
+  @Published var state: State
   
-  // MARK: Initializer
   init(provider: ServiceProviderType) {
     self.provider = provider
-    self.state = State()
+    state = .raw
   }
   
-  // MARK: Methods
   func action(_ action: Action) {
   }
-}</string>
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>1D76BEA1-DCDE-4658-826A-F3A5F6BA2347</string>
 	<key>IDECodeSnippetLanguage</key>
@@ -44,6 +43,6 @@ final class &lt;#Name#&gt;ViewModel: ViewModelType {
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>
