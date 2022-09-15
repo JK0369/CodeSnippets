@@ -3,42 +3,29 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>iView</string>
+	<string>iModel</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>import SwiftUI
-import Combine
+	<string>import KeyedCodable
 
-struct &lt;#Name#&gt;View: View {
-  // MARK: Properties
-  @ObservedObject var viewModel: &lt;#Name#&gt;ViewModel
-  
-  // MARK: UI
-  var body: some View {
-    NavigationView {
-      self.contentView
-        .navigationTitle(Text(&lt;#titleName#&gt;))
-    }
+struct &lt;#Name#&gt;: ModelType {
+  enum CodingKeys: String, KeyedKey {
+    case id
   }
-  
-  @ViewBuilder
-  private var contentView: some View {
-    switch viewModel.state {
-    }
-  }
+  let id: String
 }
 </string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>357C91B3-A749-4B81-A679-4B4B45F2E0BB</string>
+	<string>62EF03E9-381D-481D-B139-C8EB12E97581</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>iView</string>
+	<string>iModel</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

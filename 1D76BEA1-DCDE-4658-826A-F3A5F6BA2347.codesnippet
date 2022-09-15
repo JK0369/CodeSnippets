@@ -9,26 +9,30 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>import Combine
+	<string>import SwiftUI
+import Combine
 
-final class &lt;#Name#&gt;ViewModel: ViewModelable {
+final class SearchViewModel: ViewModelable {
+  // MARK: Types
   enum Action {
   }
   enum State {
-    case raw
   }
-   
-  // MARK: Properties
-  var provider: ServiceProviderType
-  var cancellables = Set&lt;AnyCancellable&gt;()
-  @Published var state: State
   
+  // MARK: Properties
+  @Published var state: State
+  var provider: ServiceProviderType
+
+  // MARK: Initailizer
   init(provider: ServiceProviderType) {
     self.provider = provider
-    state = .raw
+    state = &lt;#InitState#&gt;
   }
   
+  // MARK: Action
   func action(_ action: Action) {
+    switch action {
+    }
   }
 }
 </string>
