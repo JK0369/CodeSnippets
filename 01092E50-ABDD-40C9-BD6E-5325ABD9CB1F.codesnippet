@@ -35,6 +35,7 @@
       .padding(.init(bottom: 4))
     }
   }
+  .listStyle(PlainListStyle())
   .navigationTitle("Search")
   .overlay {
     if isLoading {
