@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>iList</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>private var photoWidth: CGFloat {
+  UIScreen.main.bounds.width
+}
+
+@ViewBuilder
+private func getList() -&gt; some View {
+  ScrollView {
+    LazyVStack {
+      ForEach(viewModel.photos) { photo in
+        NavigationLink(
+          destination: {
+            Image(uiImage: photo.uiImage)
+              .resizable()
+              .frame(
+                width: photoWidth,
+                height: getHeight(imageWidth: photo.width, imageHeight: photo.height)
+              )
+          },
+          label: {
+            Image(uiImage: photo.uiImage)
+              .resizable()
+              .frame(
+                width: photoWidth,
+                height: getHeight(imageWidth: photo.width, imageHeight: photo.height)
+              )
+          }
+        )
+      }
+      if !viewModel.photos.isEmpty {
+        HStack {
+          Spacer()
+          ProgressView()
+            .onAppear {
+              viewModel.fetchPhoto()
+            }
+          Spacer()
+        }
+      }
+    }
+  }
+}
+
+private func getHeight(imageWidth: Double, imageHeight: Double) -&gt; Double {
+  photoWidth * imageHeight / imageWidth
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>12538D40-1C5B-4E8C-8621-DF3730E80C46</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>iList</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

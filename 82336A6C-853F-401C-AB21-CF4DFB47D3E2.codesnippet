@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>iGridView</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>private var threeDividedWidth: CGFloat {
+  (UIScreen.main.bounds.width - 20) / 3 // -20은 좌우 패딩 설정에서 왼쪽 오른쪽 각 10씩 떙겼기 때문이고, 3으로 나눈건 3개 셀 나열
+}  
+
+@ViewBuilder
+private func getGridView(photos: [Photo]) -&gt; some View {
+  let gridItems: [GridItem] = [
+    GridItem(.fixed(threeDividedWidth)),
+    GridItem(.fixed(threeDividedWidth)),
+    GridItem(.fixed(threeDividedWidth))
+  ]
+  
+  ScrollView {
+    LazyVGrid(columns: gridItems) { // 이 spacing값은 위, 아래 간격을 의미
+      ForEach(photos) { photo in
+        NavigationLink(
+          destination: {
+            PhotoInfoView(photo: photo)
+          },
+          label: {
+            PhotoGridItemView(photo: photo) // 주의 - 이미지 불러올때, aspectRatio(1, contentMode: .fill) 로 설정
+          }
+        )
+      }
+      .padding(EdgeInsets(-3)) // 디폴트 간격이 4이므로 -3으로하여 패딩이 1로 적용되도록 설정
+      if photos.isEmpty.toggled {
+        HStack {
+          Spacer()
+          AnyView.spinnerView
+            .onAppear {
+              // 이렇게 페이지 네이션 하는 이유: viewModel으 Published를 set할때마다 main thread가 사용되므로, row가 변경될때마다 viewModel로 보내면 성능저하
+              viewModel.action(.onAppearLastRow)
+            }
+          Spacer()
+        }
+      }
+    }
+    .searchable(
+      text: $query,
+      placement: .navigationBarDrawer,
+      prompt: "picture, tree, apple ... "
+    )
+    .onSubmit(of: .search) {
+      viewModel.action(.onInputQuery(query))
+    }
+  }
+  .padding(EdgeInsets.with(left: 10, right: 10)) // 좌우 10씩 패딩 값 부여 (부여하지 않으면 indicator가 보이지 않음)
+  }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>82336A6C-853F-401C-AB21-CF4DFB47D3E2</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>iGridView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

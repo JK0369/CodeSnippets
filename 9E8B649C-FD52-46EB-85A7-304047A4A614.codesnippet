@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>iFittedGridView</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>private var twoDividedWidth: CGFloat {
+  (UIScreen.main.bounds.width - 20) / 2 // -20은 좌우 패딩 설정에서 왼쪽 오른쪽 각 10씩 떙겼기 때문
+}
+
+@ViewBuilder
+private func getFittedView(photos: [PhotoImage]) -&gt; some View {
+  ScrollView {
+    HStack(alignment: .top) {
+      LazyVStack(spacing: 8) {
+        ForEach(photos.splitTwoArray[0]) { photo in
+          NavigationLink(
+            destination: {
+              PhotoInfoView(photo: photo)
+                .navigationTitle(photo.title)
+            },
+            label: {
+              Image(uiImage: photo.uiImage)
+                .resizable()
+                .frame(width: twoDividedWidth, height: twoDividedWidth * photo.height / photo.width)
+            }
+          )
+        }
+        if photos.isEmpty.toggled {
+          HStack {
+            Spacer()
+            ProgressView()
+              .onAppear {
+                // 이렇게 페이지 네이션 하는 이유: viewModel으 Published를 set할때마다 main thread가 사용되므로, row가 변경될때마다 viewModel로 보내면 성능저하
+                viewModel.action(.onAppearLastRow)
+              }
+            Spacer()
+          }
+        }
+        
+      }
+      
+      LazyVStack(spacing: 8) {
+        ForEach(photos.splitTwoArray[1]) { photo in
+          NavigationLink(
+            destination: {
+              PhotoInfoView(photo: photo)
+                .navigationTitle(photo.title)
+            },
+            label: {
+              Image(uiImage: photo.uiImage)
+                .resizable()
+                .frame(width: twoDividedWidth, height: twoDividedWidth * photo.height / photo.width)
+            }
+          )
+        }
+        if photos.isEmpty.toggled {
+          HStack {
+            Spacer()
+            ProgressView()
+              .onAppear {
+                // 이렇게 페이지 네이션 하는 이유: viewModel으 Published를 set할때마다 main thread가 사용되므로, row가 변경될때마다 viewModel로 보내면 성능저하
+                viewModel.action(.onAppearLastRow)
+              }
+            Spacer()
+          }
+        }
+        
+      }
+    }
+  }
+  .searchable(
+    text: $query,
+    placement: .navigationBarDrawer,
+    prompt: "picture, tree, apple ... "
+  )
+  .onSubmit(of: .search) {
+    viewModel.action(.onInputQuery(query))
+  }
+  .padding(EdgeInsets.with(left: 10, right: 10))</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>9E8B649C-FD52-46EB-85A7-304047A4A614</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>iFittedGridView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

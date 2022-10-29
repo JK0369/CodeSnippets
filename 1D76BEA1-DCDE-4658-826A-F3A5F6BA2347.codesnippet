@@ -12,7 +12,7 @@
 	<string>import SwiftUI
 import Combine
 
-final class SearchViewModel: ViewModelable {
+final class &lt;#Name#&gt;ViewModel: ViewModelable {
   // MARK: Types
   enum Action {
   }

@@ -3,43 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>iView</string>
+	<string>iGetView</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>import SwiftUI
-import Combine
-
-struct &lt;#Name#&gt;View: View {
-  // MARK: Properties
-  @ObservedObject var viewModel: &lt;#Name#&gt;ViewModel
+	<string>@ViewBuilder
+private func get&lt;#name#&gt;View(&lt;#parameter#&gt;) -&gt; some View {
   
-  // MARK: UI
-  var body: some View {
-    NavigationView {
-      self.contentView
-        .navigationTitle(Text(&lt;#titleName#&gt;))
-    }
-    .navigationViewStyle(.stack) // 이 값이 없으면 iPad에서 sidebar처럼 보여짐
-  }
-  
-  @ViewBuilder
-  private var contentView: some View {
-    switch viewModel.state {
-    }
-  }
-}
-</string>
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>357C91B3-A749-4B81-A679-4B4B45F2E0BB</string>
+	<string>D04AE93F-697F-4D18-90CE-397B0ADEFE84</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>iView</string>
+	<string>iGetView</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
