@@ -37,7 +37,7 @@ final class &lt;#Name#&gt;Cell: UITableViewCell, Reusable {
   }
   
   // MARK: Properties
-  var disposeBag = DisposeBag()
+  priavte(set) var disposeBag = DisposeBag()
   
   // MARK: Initializers
   @available(*, unavailable)
@@ -72,8 +72,7 @@ final class &lt;#Name#&gt;Cell: UITableViewCell, Reusable {
   func prepare(&lt;#parameter#&gt;) {
     &lt;#body#&gt;
   }
-}
-</string>
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>BBD2D4C6-EF0D-47AF-98BD-78453A795524</string>
 	<key>IDECodeSnippetLanguage</key>
