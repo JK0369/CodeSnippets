@@ -22,7 +22,6 @@ private let textViewContainer = UIView().then {
   $0.clipsToBounds = true
 }
 private let textView = UITextView().then {
-  $0.backgroundColor = Color.white
   $0.isEditable = true
   $0.textContainerInset = .zero
   $0.contentInset = .zero
@@ -39,6 +38,7 @@ private let textView = UITextView().then {
 self.textViewContainer.snp.makeConstraints {
 //  $0.top.equalTo(self.navigationBar.snp.bottom).offset(Metric.textViewTopSpacing)
   $0.left.right.equalToSuperview().inset(Metric.horizontalInset)
+//  $0.bottom.lessThanOrEqualTo(self.keyboardSafeAreaView).offset(-Metric.bottomSpacing)
 }
 self.textView.snp.makeConstraints {
   $0.edges.equalToSuperview().inset(Metric.textViewInset)
