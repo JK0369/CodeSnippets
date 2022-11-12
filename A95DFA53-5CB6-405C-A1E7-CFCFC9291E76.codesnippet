@@ -18,9 +18,12 @@
   // static let tableViewVerticalScrollIndicatorInsets = UIEdgeInsets.with(top: 20, right: 8)
   $0.verticalScrollIndicatorInsets = Metric.tableViewVerticalScrollIndicatorInsets
   $0.contentInset = .zero
+  $0.indicatorStyle = .black
   // static let tableViewEstimatedRowHeight = 34.0
   $0.register(cellType: &lt;#SingleTownDMListChannelCell.self#&gt;)
   $0.estimatedRowHeight = Metric.tableViewEstimatedRowHeight
+//  $0.estimatedSectionHeaderHeight = Metric.estimatedSectionHeaderHeight
+//  $0.register(headerFooterViewType: DutchPaySummarySectionHeaderView.self)
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>A95DFA53-5CB6-405C-A1E7-CFCFC9291E76</string>

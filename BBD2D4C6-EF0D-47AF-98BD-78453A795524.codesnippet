@@ -31,13 +31,13 @@ final class &lt;#Name#&gt;Cell: UITableViewCell, Reusable {
   }
   
   // MARK: UI
-  private let &lt;#name#&gt;ImageView = UIImageView().then {
+  private let &lt;#thumbnail#&gt;imageView = UIImageView().then {
     $0.image = Material.&lt;#image#&gt;
     $0.isUserInteractionEnabled = false
   }
   
   // MARK: Properties
-  priavte(set) var disposeBag = DisposeBag()
+  private(set) var disposeBag = DisposeBag()
   
   // MARK: Initializers
   @available(*, unavailable)
@@ -53,7 +53,7 @@ final class &lt;#Name#&gt;Cell: UITableViewCell, Reusable {
       self.&lt;#view#&gt;,
     )
     
-    self.&lt;#name#&gt;.snp.makeConstraints {
+    self.&lt;#view#&gt;.snp.makeConstraints {
       $0.&lt;#edges#&gt;
     }
   }
@@ -62,6 +62,7 @@ final class &lt;#Name#&gt;Cell: UITableViewCell, Reusable {
     log.verbose("DEINIT: \(Self.description().components(separatedBy: ".").last ?? "")")
   }
   
+  // MARK: Methods
   override func prepareForReuse() {
     super.prepareForReuse()
     
