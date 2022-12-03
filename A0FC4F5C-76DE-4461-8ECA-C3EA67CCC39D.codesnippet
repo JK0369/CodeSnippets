@@ -35,6 +35,17 @@ final class &lt;#Name#&gt;: BaseView {
   // MARK: Properties
   &lt;#var closeButtonTapObservable: Observable&lt;Void&gt; { self.button.rx.tap.asObservable() }#&gt;
   
+  // MARK: Initializers
+  required init(mode: Mode) {
+    self.mode = mode
+    super.init()
+  }
+  
+  @available(*, unavailable)
+  required init() {
+    fatalError("init() has not been implemented")
+  }
+  
   // MARK: Layout
   override func configures() {
     super.configures()
