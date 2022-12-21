@@ -18,28 +18,43 @@ import RxCocoa
 import Reusable
 
 final class &lt;#UpperCaseName#&gt;ViewController: BaseViewController, ReactorKit.View {
-  // MARK: Constants
-  private enum Metric {
-  }
-  private enum Color {
-  }
-  private enum Text {
-  }
-  
-  // MARK: UI
-  
-  // MARK: Properties
-  
-  // MARK: Layout
-  override func configures() {
-    super.configures()
+    // MARK: Constants
+    private enum Metric {
+    }
     
-  }
-  
-  func bind(reactor: &lt;#UpperCaseName#&gt;ViewReactor) {
-    // Action
-    // State
-  }
+    // MARK: UIs
+    
+    // MARK: Properties
+    
+    // MARK: Configures
+    override func configures() {
+        super.configures()
+        
+        setupViews()
+        setupLayouts()
+    }
+    
+    private func setupViews() {
+        
+    }
+    
+    private func setupLayouts() {
+        
+    }
+    
+    // MARK: Bind
+    func bind(reactor: &lt;#UpperCaseName#&gt;ViewReactor) {
+        bindActions()
+        bindStates()
+    }
+    
+    private func bindActions() {
+        
+    }
+    
+    private func bindStates() {
+        
+    }
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>3C716A7B-8E52-4724-8061-AFA03F954BFF</string>

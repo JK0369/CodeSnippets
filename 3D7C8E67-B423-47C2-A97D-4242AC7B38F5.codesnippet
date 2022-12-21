@@ -9,7 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>self.&lt;#name#&gt;.snp.makeConstraints {
+	<string>&lt;#name#&gt;.snp.makeConstraints {
   $0.&lt;#edges#&gt;
 }</string>
 	<key>IDECodeSnippetIdentifier</key>

@@ -14,7 +14,7 @@ import RxCocoa
 import RxSwift
 
 final class &lt;#Name#&gt;ViewReactor: Reactor {
-  // MARK: Constants
+  // MARK: Types
   enum Action {
     
   }

@@ -50,11 +50,11 @@ final class &lt;#Name#&gt;: BaseView {
   override func configures() {
     super.configures()
     
-    self.addSubviews(
+    addSubviews(
       &lt;#property#&gt;
     )
     
-    self.&lt;#name#&gt;.snp.makeConstraints {
+    &lt;#name#&gt;.snp.makeConstraints {
       $0.&lt;#edges#&gt;
     }
   }
