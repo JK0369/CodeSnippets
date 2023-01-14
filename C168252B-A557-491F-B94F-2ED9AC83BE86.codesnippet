@@ -10,12 +10,10 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>private let &lt;#name#&gt;Label = UILabel().then {
-  $0.attributedText = Text.&lt;#text#&gt;
-    .styled(style: .&lt;#body14#&gt;, with: .alignment(.&lt;#center#&gt;), .lineBreakMode(.&lt;#byTruncatingTail#&gt;))
-    .colored(Color.&lt;#blue#&gt;)
-  $0.numberOfLines = &lt;#0#&gt;
-}
-</string>
+    $0.numberOfLines = &lt;#1#&gt;
+    $0.font = .systemFont(ofSize: &lt;#16#&gt;, weight: &lt;#.regular#&gt;)
+    $0.textColor = &lt;#.lightGray#&gt;
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>C168252B-A557-491F-B94F-2ED9AC83BE86</string>
 	<key>IDECodeSnippetLanguage</key>

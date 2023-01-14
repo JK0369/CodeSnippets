@@ -14,50 +14,53 @@ import SnapKit
 import RxSwift
 import RxCocoa
 
-final class &lt;#Name#&gt;: BaseView {
-  // MARK: Constants
-  private enum Metric {
-    
-  }
-  private enum Material {
-    
-  }
-  private enum Color {
-    
-  }
-  private enum Text {
-    
-  }
-  
-  // MARK: UI
-  &lt;#UI Property#&gt;
-  
-  // MARK: Properties
-  &lt;#var closeButtonTapObservable: Observable&lt;Void&gt; { self.button.rx.tap.asObservable() }#&gt;
-  
-  // MARK: Initializers
-  required init(mode: Mode) {
-    self.mode = mode
-    super.init()
-  }
-  
-  @available(*, unavailable)
-  required init() {
-    fatalError("init() has not been implemented")
-  }
-  
-  // MARK: Layout
-  override func configures() {
-    super.configures()
-    
-    addSubviews(
-      &lt;#property#&gt;
-    )
-    
-    &lt;#name#&gt;.snp.makeConstraints {
-      $0.&lt;#edges#&gt;
+final class &lt;#Name#&gt;View: BaseView {
+    // MARK: Constants
+    private enum Metric {
+        
     }
-  }
+    
+    // MARK: UI
+    &lt;#UI Property#&gt;
+    
+    // MARK: Properties
+    
+    
+    // MARK: Initializers
+    required init(mode: Mode) {
+        self.mode = mode
+        super.init()
+    }
+    
+    @available(*, unavailable)
+    required init() {
+        fatalError("init() has not been implemented")
+    }
+    
+    // MARK: Layout
+    override func configures() {
+        super.configures()
+        
+        addSubviews(
+            &lt;#property#&gt;
+        )
+        
+        &lt;#someView#&gt;.snp.makeConstraints {
+            $0.&lt;#edges#&gt;
+        }
+    }
+}
+
+extension Reactive where Base: &lt;#Name#&gt;View {
+    var &lt;#titleText#&gt;: Observable&lt;&lt;#String#&gt;&gt; {
+        &lt;#titleLabel.text#&gt;
+    }
+    
+    var &lt;#isCustomViewHidden#&gt;: Binder&lt;&lt;#Bool#&gt;&gt; {
+        Binder(base) { base, &lt;#isHidden#&gt; in
+            base.rx.isHidden.onNext(isHidden)
+        }
+    }
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>A0FC4F5C-76DE-4461-8ECA-C3EA67CCC39D</string>

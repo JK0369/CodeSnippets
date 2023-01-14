@@ -10,14 +10,14 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>NSLayoutConstraint.activate([
-  self.&lt;#target#&gt;.leftAnchor.constraint(equalTo: self.&lt;#property#&gt;.&lt;#constraints#&gt;),
-  self.&lt;#target#&gt;.rightAnchor.constraint(equalTo: self.&lt;#property#&gt;.&lt;#constraints#&gt;),
-  self.&lt;#target#&gt;.bottomAnchor.constraint(equalTo: self.&lt;#property#&gt;.&lt;#constraints#&gt;),
-  self.&lt;#target#&gt;.topAnchor.constraint(equalTo: self.&lt;#property#&gt;.&lt;#constraints#&gt;),
-  self.&lt;#target#&gt;.heightAnchor.constraint(equalToConstant: &lt;#T##CGFloat#&gt;),
-  self.&lt;#target#&gt;.widthAnchor.constraint(equalToConstant: &lt;#T##CGFloat#&gt;),
-  self.&lt;#target#&gt;.centerYAnchor.constraint(equalTo: self.&lt;#property#&gt;.&lt;#constraints#&gt;),
-  self.&lt;#target#&gt;.centerXAnchor.constraint(equalTo: self.&lt;#property#&gt;.&lt;#constraints#&gt;),
+  &lt;#target#&gt;.leftAnchor.constraint(equalTo: &lt;#property#&gt;.&lt;#constraints#&gt;),
+  &lt;#target#&gt;.rightAnchor.constraint(equalTo: &lt;#property#&gt;.&lt;#constraints#&gt;),
+  &lt;#target#&gt;.bottomAnchor.constraint(equalTo: &lt;#property#&gt;.&lt;#constraints#&gt;),
+  &lt;#target#&gt;.topAnchor.constraint(equalTo: &lt;#property#&gt;.&lt;#constraints#&gt;),
+  &lt;#target#&gt;.heightAnchor.constraint(equalToConstant: &lt;#T##CGFloat#&gt;),
+  &lt;#target#&gt;.widthAnchor.constraint(equalToConstant: &lt;#T##CGFloat#&gt;),
+  &lt;#target#&gt;.centerYAnchor.constraint(equalTo: &lt;#property#&gt;.&lt;#constraints#&gt;),
+  &lt;#target#&gt;.centerXAnchor.constraint(equalTo: &lt;#property#&gt;.&lt;#constraints#&gt;),
 ])</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>364C088F-A596-4DF2-ACC5-ED040EBCCFF2</string>

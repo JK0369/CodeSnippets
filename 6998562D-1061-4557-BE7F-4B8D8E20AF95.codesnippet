@@ -9,21 +9,9 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>private let &lt;#Name#&gt;Button = ScaleRoundableButton().then {
-  $0.rounded = true
-  $0.backgroundColor = &lt;#Color.smoke#&gt;
-  
-  let label = UILabel().then {
-    $0.attributedText = Text.buttonText
-      .styled(style: .title16, with: .alignment(.center))
-      .colored(Color.havelockblue)
-    $0.numberOfLines = 1
-    $0.isUserInteractionEnabled = false
-  }
-  $0.addSubview(label)
-  label.snp.makeConstraints {
-    $0.edges.equalToSuperview().inset(UIEdgeInsets(horizontal: 16, vertical: 8)).priority(999)
-  }
+	<string>private let &lt;#name#&gt;Button = UIButton(type: .system).then {
+    $0.setTitle(&lt;#"더보기"#&gt;, for: .normal)
+    $0.setTitle(&lt;#"더보기"#&gt;, for: .highlighted)
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>6998562D-1061-4557-BE7F-4B8D8E20AF95</string>

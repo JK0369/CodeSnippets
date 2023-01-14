@@ -9,25 +9,25 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>private let collectionView = SelfSizingCollectionView(
-  frame: .zero,
-  collectionViewLayout: UICollectionViewFlowLayout().then {
-    $0.scrollDirection = .vertical
-    // static let collectionCellSpacing = 8.0
-    $0.minimumLineSpacing = Metric.collectionCellSpacing
-    $0.minimumInteritemSpacing = 0
-    $0.itemSize = Metric.collectionViewCellSize // 또는 delegate 사용
-  }
+	<string>private let collectionView = UICollectionView(
+    frame: .zero,
+    collectionViewLayout: UICollectionViewFlowLayout().then {
+        $0.scrollDirection = .vertical
+        // static let collectionCellSpacing = 8.0
+        $0.minimumLineSpacing = Metric.collectionCellSpacing
+        $0.minimumInteritemSpacing = 0
+        $0.itemSize = Metric.collectionViewCellSize // 또는 delegate 사용
+    }
 ).then {
-  $0.isScrollEnabled = true
-  $0.showsHorizontalScrollIndicator = false
-  $0.showsVerticalScrollIndicator = true
-  // static let collectionViewVerticalScrollIndicatorInsets = UIEdgeInsets.with(top: -2, right: 4)
-  $0.scrollIndicatorInsets = Metric.collectionViewVerticalScrollIndicatorInsets
-  $0.contentInset = .zero
-  $0.backgroundColor = .clear
-  $0.clipsToBounds = true
-  $0.register(cellType: &lt;#PromptEmptyCell.self#&gt;)
+    $0.isScrollEnabled = true
+    $0.showsHorizontalScrollIndicator = false
+    $0.showsVerticalScrollIndicator = true
+    // static let collectionViewVerticalScrollIndicatorInsets = UIEdgeInsets.with(top: -2, right: 4)
+    $0.scrollIndicatorInsets = Metric.collectionViewVerticalScrollIndicatorInsets
+    $0.contentInset = .zero
+    $0.backgroundColor = .clear
+    $0.clipsToBounds = true
+    $0.register(&lt;#MyCell#&gt;.self, forCellReuseIdentifier: &lt;#MyCell#&gt;.id)
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>5104AE3E-8B0C-4F94-964A-B5282FBB78AE</string>
